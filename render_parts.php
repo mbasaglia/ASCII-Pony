@@ -27,7 +27,7 @@ foreach($dir_files as $file)
 $chars=array_fill(0,$maxh,array_fill(0,$maxw,null));
 
 foreach ( $files as $color => $lines )
-    for ( $i = 0; $i < $maxh; $i++ )
+    for ( $i = 0; $i < count($lines); $i++ )
     {
         for ( $j = 0, $l = strlen($lines[$i]); $j < $l; $j++ )
         {
