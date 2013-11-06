@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-$dir = dirname(__FILE__);
+$dir = isset($argv[1]) ? $argv[1] : getcwd();
 $dir_files = scandir($dir);
 $files = array();
 $maxw = 0;
