@@ -11,8 +11,9 @@ foreach($dir_files as $file)
     {
         $curr_file = file("$dir/$file",FILE_IGNORE_NEW_LINES);
         $files[$file] = $curr_file;
-        foreach($curr_file as $line)
+        foreach($curr_file as &$line)
         {
+            $line = rtrim($line);
             $w = strlen($line);
             if ( $w> $maxw )
                 $maxw = $w;
