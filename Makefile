@@ -15,15 +15,20 @@ OUT_PLAIN=$(addsuffix .plain.txt,$(PONIES))
 OUT_COLOR=$(addsuffix .colored.txt,$(PONIES))
 find_deps=$(subst ;,\;,$(wildcard $(1)/*))
 
+.PHONY: show
+
 all: $(OUT_COLOR) $(OUT_PLAIN)
 
 
-%.colored.txt : $(SCRIPT)
-%.colored.txt : $(PWD)/Makefile
+# %.colored.txt : $(SCRIPT)
+# %.colored.txt : $(PWD)/Makefile
 %.colored.txt : $(call find_deps, $*)
 	 $(SCRIPT) $* >$*.colored.txt
 
-%.plain.txt : $(SCRIPT)
-%.plain.txt : $(PWD)/Makefile
+# %.plain.txt : $(SCRIPT)
+# %.plain.txt : $(PWD)/Makefile
 %.plain.txt : $(call find_deps, $*)
 	$(SCRIPT) $* >$*.plain.txt nocolor
+
+show: $(PONY).colored.txt
+	@cat $(PONY).colored.txt
