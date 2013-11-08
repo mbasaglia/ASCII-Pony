@@ -1,6 +1,7 @@
 #!/usr/bin/php
 <?php
 $dir = isset($argv[1]) ? $argv[1] : getcwd();
+$print_color = !isset($argv[2]) || $argv[2] != 'nocolor';
 $dir_files = scandir($dir);
 $files = array();
 $maxw = 0;
@@ -42,10 +43,13 @@ foreach($chars as $line)
     {
         if ( is_null($char) )
             echo ' ';
-        else
+        else if ( $print_color )
             echo "\x1b[$char[color]m$char[char]";
+        else 
+            echo $char['char'];
     }
     echo "\n";
 }
-echo "\x1b[0m\n";
+if ( $print_color )
+    echo "\x1b[0m\n";
 
