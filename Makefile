@@ -13,9 +13,12 @@ PONIES=	Main6/applejack-nohat \
 SCRIPT=$(PWD)/render_parts.php
 OUT_PLAIN=$(addsuffix .plain.txt,$(PONIES))
 OUT_COLOR=$(addsuffix .colored.txt,$(PONIES))
+OUT_SVG=$(addsuffix .svg,$(PONIES))
+OUT_PNG=$(addsuffix .png,$(PONIES))
+OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG)
 find_deps=$(subst ;,\\\;,$(wildcard $(1)/*))
 
-all: $(OUT_COLOR) $(OUT_PLAIN)
+all: $(OUT_ALL)
 
 define rule_template
 $(1).colored.txt: $(call find_deps, $(1))
@@ -23,7 +26,13 @@ $(1).colored.txt: $(call find_deps, $(1))
 
 $(1).plain.txt: $(call find_deps, $(1))
 	$(SCRIPT) $(1) >$(1).plain.txt nocolor
+	
+$(1).svg: $(call find_deps, $(1))
+	$(SCRIPT) $(1) >$(1).svg svg
 endef
+
+%.png : %.svg
+	inkscape $*.svg -e $*.png
 
 $(foreach pony,$(PONIES),$(eval $(call rule_template,$(pony))))
 
