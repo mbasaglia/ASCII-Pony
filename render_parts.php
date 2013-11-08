@@ -7,7 +7,7 @@ $maxw = 0;
 $maxh = 0;
 foreach($dir_files as $file)
 {
-    if ( strpos($file,";") !== false )
+    if ( preg_match("/([0-9]+;)*[0-9]+/",$file) !== false )
     {
         $curr_file = file("$dir/$file",FILE_IGNORE_NEW_LINES);
         $files[$file] = $curr_file;
