@@ -49,13 +49,15 @@ $dir = isset($argv[1]) ? $argv[1] : getcwd();
 const COLORED_TEXT = 0;
 const PLAIN_TEXT   = 1;
 const SVG          = 2;
+const BASH         = 3;
 if ( !isset($argv[2]) )
     $output_type = COLORED_TEXT;
 else if ( $argv[2] == 'nocolor' )
     $output_type = PLAIN_TEXT;
 else if ( $argv[2] == 'svg' )
     $output_type = SVG;
-    
+else if ( $argv[2] == 'bash' )
+    $output_type = BASH;
     
 $dir_files = scandir($dir);
 $files = array();
@@ -126,6 +128,16 @@ if ( $output_type == SVG )
 }
 else
 {
+
+    
+    if ( $output_type == BASH )
+    {
+        echo "#!/bin/bash\n";
+        echo "read -r -d '' Heredoc_var <<'Heredoc_var'\n\\x1b[0m";
+    }
+    
+    
+    
     foreach($chars as $line)
     {
         if ( $output_type == SVG )
@@ -140,12 +152,25 @@ else
                 echo ' ';
             else if ( $output_type == COLORED_TEXT )
                 echo "\x1b[$char[color]m$char[char]";
+            else if ( $output_type == BASH )
+            {
+                $c = $char['char'];
+                if ( $c == '\\')
+                    $c = '\\\\';
+                echo "\\x1b[$char[color]m$c";
+            }
             else
                 echo $char['char'];
         }
         echo "\n";
     }
+    
     if ( $output_type == COLORED_TEXT )
         echo "\x1b[0m\n";
+        
+    if ( $output_type == BASH )
+    {
+        echo "\\x1b[0m\nHeredoc_var\necho -e \"\$Heredoc_var\"\n";
+    }
 }
 
