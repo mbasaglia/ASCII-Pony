@@ -7,7 +7,8 @@ PONIES=	applejack-nohat \
 	twilight-unicorn \
 	derpy \
 	trixie-hat \
-	rose
+	rose \
+	lyra
 
 MAKEFILE_DIR=$(dir $(lastword $(MAKEFILE_LIST)))
 PONY_DIR=$(MAKEFILE_DIR)Ponies
