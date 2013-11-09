@@ -6,7 +6,8 @@ PONIES=	applejack-nohat \
 	twilight-alicorn \
 	twilight-unicorn \
 	derpy \
-	trixie-hat 
+	trixie-hat \
+	rose
 
 MAKEFILE_DIR=$(dir $(lastword $(MAKEFILE_LIST)))
 PONY_DIR=$(MAKEFILE_DIR)Ponies
@@ -21,22 +22,28 @@ OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH)
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(addprefix $(PONY_DIR)/,$(subst ;,\\\;,$(wildcard $(1)/*)))
 
+.PHONY: show show_deps cleans
+
 all: $(OUT_ALL)
 
 define rule_template
 $(OUT_DIR)/$(1).colored.txt: | $(dir $(OUT_DIR)/$(1))
 $(OUT_DIR)/$(1).colored.txt: $(call find_deps, $(1))
+$(OUT_DIR)/$(1).colored.txt:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).colored.txt
 
 $(PONY_DIR)/$(1).txt: $(call find_deps, $(1))
+$(PONY_DIR)/$(1).txt:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(PONY_DIR)/$(1).txt nocolor
 	
 $(OUT_DIR)/$(1).svg: | $(dir $(OUT_DIR)/$(1))
 $(OUT_DIR)/$(1).svg: $(call find_deps, $(1))
+$(OUT_DIR)/$(1).svg:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).svg svg
 	
 $(OUT_DIR)/$(1).sh: | $(dir $(OUT_DIR)/$(1))
 $(OUT_DIR)/$(1).sh: $(call find_deps, $(1))
+$(OUT_DIR)/$(1).sh:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).sh bash
 	chmod a+x $(OUT_DIR)/$(1).sh
 endef
