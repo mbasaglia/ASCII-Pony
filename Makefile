@@ -10,7 +10,8 @@ PONIES=	applejack-nohat \
 	rose \
 	lyra
 
-MAKEFILE_DIR=$(dir $(lastword $(MAKEFILE_LIST)))
+MAKEFILE=$(lastword $(MAKEFILE_LIST))
+MAKEFILE_DIR=$(dir $(MAKEFILE))
 PONY_DIR=$(MAKEFILE_DIR)Ponies
 SCRIPT=$(MAKEFILE_DIR)render_parts.php
 OUT_DIR=$(MAKEFILE_DIR)rendered
@@ -23,7 +24,7 @@ OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH)
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(addprefix $(PONY_DIR)/,$(subst ;,\\\;,$(wildcard $(1)/*)))
 
-.PHONY: show show_deps cleans
+.PHONY: show show_deps cleans list random
 
 all: $(OUT_ALL)
 
@@ -68,3 +69,11 @@ show_deps:
 clean:
 	rm -f $(OUT_ALL)
 	rmdir --ignore-fail-on-non-empty $(OUT_DIRS) $(OUT_DIR)
+
+list:
+	@$(foreach pony,$(PONIES), echo $(pony);)
+	
+random: PONY=$(shell make -f $(MAKEFILE) list | shuf | head -n 1)
+random: 
+	@make -f $(MAKEFILE) show PONY=$(PONY)
+
