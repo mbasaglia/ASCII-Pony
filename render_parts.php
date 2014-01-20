@@ -45,11 +45,57 @@ function color_ansi2svg($col)
     return "silver";
 }
 
+function color_ansi2irc($col)
+{
+    $formats = explode(';',$col);
+    $color_n = 7;
+    $bold = false;
+    foreach($formats as $format)
+    {
+        $format = (int)$format;
+        if ( $format >= 30 && $format < 38 )
+        {
+            $color_n = $format-30;
+        }
+        else if ( $format == 1 )
+            $bold = true;
+    }
+    
+    
+    if ( $bold )
+    {
+        switch($color_n)
+        {
+            case 0: return '14';
+            case 1: return '04';
+            case 2: return '09';
+            case 3: return '08';
+            case 4: return '12';
+            case 5: return '13';
+            case 6: return '11';
+            case 7: return '00';
+        }
+    }
+    switch($color_n)
+    {
+        case 0: return '01';
+        case 1: return '05';
+        case 2: return '03';
+        case 3: return '07';
+        case 4: return '02';
+        case 5: return '06';
+        case 6: return '10';
+        case 7: return '15';
+    }
+    return '';
+}
+
 $dir = isset($argv[1]) ? $argv[1] : getcwd();
 const COLORED_TEXT = 0;
 const PLAIN_TEXT   = 1;
 const SVG          = 2;
 const BASH         = 3;
+const IRC_TEXT     = 4;
 if ( !isset($argv[2]) )
     $output_type = COLORED_TEXT;
 else if ( $argv[2] == 'nocolor' )
@@ -58,6 +104,8 @@ else if ( $argv[2] == 'svg' )
     $output_type = SVG;
 else if ( $argv[2] == 'bash' )
     $output_type = BASH;
+else if ( $argv[2] == 'irc' )
+    $output_type = IRC_TEXT;
     
 $dir_files = scandir($dir);
 $files = array();
@@ -107,12 +155,8 @@ if ( $output_type == SVG )
     
     foreach($chars as $line)
     {
-        if ( $output_type == SVG )
-        {
-            $y += $font_size;
-            $x = 0;
-        }
-        
+        $y += $font_size;
+        $x = 0;
         foreach($line as $char)
         {
             if ( !is_null($char) )
@@ -140,11 +184,8 @@ else
     
     foreach($chars as $line)
     {
-        if ( $output_type == SVG )
-        {
-            $y += $font_size;
-            $x = 0;
-        }
+        if ( $output_type == IRC_TEXT )
+            echo "\x0301,01";
         
         foreach($line as $char)
         {
@@ -159,9 +200,19 @@ else
                     $c = '\\\\';
                 echo "\\x1b[$char[color]m$c";
             }
+            else if ( $output_type == IRC_TEXT )
+            {
+                $col = color_ansi2irc($char['color']);
+                echo "\x03$col{$char['char']}";
+            }
+                
             else
                 echo $char['char'];
         }
+        
+        if ( $output_type == IRC_TEXT )
+            echo str_repeat(' ',$maxw-count($line))."\x03";
+        
         echo "\n";
     }
     

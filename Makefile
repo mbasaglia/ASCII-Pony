@@ -8,7 +8,9 @@ PONIES=	applejack-nohat \
 	derpy \
 	trixie-hat \
 	rose \
-	lyra
+	lyra \
+	vinyl-scratch-noglasses \
+	vinyl-scratch-glasses \
 
 MAKEFILE=$(lastword $(MAKEFILE_LIST))
 MAKEFILE_DIR=$(dir $(MAKEFILE))
@@ -17,10 +19,11 @@ SCRIPT=$(MAKEFILE_DIR)render_parts.php
 OUT_DIR=$(MAKEFILE_DIR)rendered
 OUT_PLAIN=$(addprefix $(PONY_DIR)/,$(addsuffix .txt,$(PONIES)))
 OUT_COLOR=$(addprefix $(OUT_DIR)/,$(addsuffix .colored.txt,$(PONIES)))
+OUT_COLOR_IRC=$(addprefix $(OUT_DIR)/,$(addsuffix .irc.txt,$(PONIES)))
 OUT_SVG=$(addprefix $(OUT_DIR)/,$(addsuffix .svg,$(PONIES)))
 OUT_PNG=$(addprefix $(OUT_DIR)/,$(addsuffix .png,$(PONIES)))
 OUT_BASH=$(addprefix $(OUT_DIR)/,$(addsuffix .sh,$(PONIES)))
-OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH)
+OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH) $(OUT_COLOR_IRC)
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(addprefix $(PONY_DIR)/,$(subst ;,\\\;,$(wildcard $(1)/*)))
 
@@ -48,6 +51,12 @@ $(OUT_DIR)/$(1).sh: $(call find_deps, $(1))
 $(OUT_DIR)/$(1).sh:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).sh bash
 	chmod a+x $(OUT_DIR)/$(1).sh
+	
+	
+$(OUT_DIR)/$(1).irc.txt: | $(dir $(OUT_DIR)/$(1))
+$(OUT_DIR)/$(1).irc.txt: $(call find_deps, $(1))
+$(OUT_DIR)/$(1).irc.txt:  $(PONY_DIR)/$(1)
+	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).irc.txt irc
 endef
 define dir_rule_template
 $(1) : 
