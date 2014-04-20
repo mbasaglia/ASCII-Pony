@@ -13,6 +13,11 @@ function color_ansi2svg($col)
         {
             $color_n = $format-30;
         }
+        else if ( $format >= 90 && $format < 98 )
+        {
+            $color_n = $format-90;
+            $bold = true;
+        }
         else if ( $format == 1 )
             $bold = true;
     }

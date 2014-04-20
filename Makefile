@@ -11,6 +11,7 @@ PONIES=	applejack-nohat \
 	lyra \
 	vinyl-scratch-noglasses \
 	vinyl-scratch-glasses \
+	celestia \
 
 MAKEFILE=$(lastword $(MAKEFILE_LIST))
 MAKEFILE_DIR=$(dir $(MAKEFILE))
