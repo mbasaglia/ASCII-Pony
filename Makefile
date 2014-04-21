@@ -1,23 +1,10 @@
-PONIES=	applejack-nohat \
-	fluttershy \
-	pinkie-pie \
-	rainbow-dash \
-	rarity \
-	twilight-alicorn \
-	twilight-unicorn \
-	derpy \
-	trixie-hat \
-	rose \
-	lyra \
-	vinyl-scratch-noglasses \
-	vinyl-scratch-glasses \
-	celestia \
 
 MAKEFILE=$(lastword $(MAKEFILE_LIST))
 MAKEFILE_DIR=$(dir $(MAKEFILE))
 PONY_DIR=$(MAKEFILE_DIR)Ponies
 SCRIPT=$(MAKEFILE_DIR)render_parts.php
 OUT_DIR=$(MAKEFILE_DIR)rendered
+PONIES=$(notdir $(shell find $(PONY_DIR) -maxdepth 1 -mindepth 1 -type d ))
 OUT_PLAIN=$(addprefix $(PONY_DIR)/,$(addsuffix .txt,$(PONIES)))
 OUT_COLOR=$(addprefix $(OUT_DIR)/,$(addsuffix .colored.txt,$(PONIES)))
 OUT_COLOR_IRC=$(addprefix $(OUT_DIR)/,$(addsuffix .irc.txt,$(PONIES)))
@@ -58,6 +45,15 @@ $(OUT_DIR)/$(1).irc.txt: | $(dir $(OUT_DIR)/$(1))
 $(OUT_DIR)/$(1).irc.txt: $(call find_deps, $(1))
 $(OUT_DIR)/$(1).irc.txt:  $(PONY_DIR)/$(1)
 	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/$(1).irc.txt irc
+
+.PHONY: $(1)
+$(1) : $(OUT_DIR)/$(1).colored.txt
+$(1) : $(PONY_DIR)/$(1).txt
+$(1) : $(OUT_DIR)/$(1).svg
+$(1) : $(OUT_DIR)/$(1).sh
+$(1) : $(OUT_DIR)/$(1).irc.txt
+	@cat $(OUT_DIR)/$(1).colored.txt
+
 endef
 define dir_rule_template
 $(1) : 
@@ -85,5 +81,4 @@ list:
 	
 random: PONY=$(shell make -f $(MAKEFILE) list | shuf | head -n 1)
 random: 
-	@make -f $(MAKEFILE) show PONY=$(PONY)
-
+	@make --no-print-directory -f $(MAKEFILE) show PONY=$(PONY)
