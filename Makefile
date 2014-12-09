@@ -16,7 +16,7 @@ OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(subst ;,\\\;,$(wildcard $(PONY_DIR)/$(1)/*))
 
 # NOTE: not .PONY :-P
-.PHONY: show show_deps cleans list random
+.PHONY: show show_deps clean list random
 
 all: $(OUT_ALL)
 
