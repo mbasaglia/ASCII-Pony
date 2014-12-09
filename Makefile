@@ -15,6 +15,7 @@ OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH) $(OUT_COLOR
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(subst ;,\\\;,$(wildcard $(PONY_DIR)/$(1)/*))
 
+# NOTE: not .PONY :-P
 .PHONY: show show_deps cleans list random
 
 all: $(OUT_ALL)
