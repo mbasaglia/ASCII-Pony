@@ -106,7 +106,7 @@ $(BINDIR):
 install: $(OUT_ALL)
 install: $(DATADIR)
 install: $(BINDIR)
-	$(INSTALL_DIR) $(MAKEFILE_DIR)rendered $(DATADIR)
+	$(INSTALL_DIR) $(OUT_DIR) $(DATADIR)
 	$(INSTALL_FILE) $(MAKEFILE_DIR)systempony $(BINDIR)
 	
 uninstall:
@@ -116,5 +116,6 @@ uninstall:
 
 #touch output files to avoid re-generations (eg: after cloning)
 touchput:
-	find $(MAKEFILE_DIR)rendered -exec touch {} \;
-	find $(MAKEFILE_DIR)rendered -name '*.png' -exec touch {} \;
+	find $(PONY_DIR) -name '*.txt' -exec touch {} \;
+	find $(OUT_DIR) -exec touch {} \;
+	find $(OUT_DIR) -name '*.png' -exec touch {} \;

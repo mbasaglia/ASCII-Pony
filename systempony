@@ -28,7 +28,7 @@ function ponyget_RAM()
 	local ramtable=$(free -m)
 	local used_M=$(echo "$ramtable" | sed -n 3p | sed -r "s/ +/\t/g"  | cut -f 3)
 	local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
-	local percent=$(echo "$used_M * 100 / $total_M " | bc)
+	let percent="$used_M * 100 / $total_M"
 	
 	local color="32";
 	if [ "$percent" -gt 66 ]
@@ -201,19 +201,20 @@ then
 	lines=$(cat "$ponyfile" | wc -l) # cat to avoid printing file name
 	let info_index=0
 	let start_line=($lines-${#INFO[@]})/2
-	for (( l=1; $l <= $lines; l++ ))
+	
+	let l=1
+	while IFS= read -r  line
 	do
-		line=$(sed -n "$l{p;q}" "$ponyfile" )
-		echo -n "$line"
 		if [ $info_index -lt ${#INFO[@]} -a $l -ge $start_line ]
 		then
 			# TODO take in consideration $COLUMNS
-			printf " \x1b[31;1m%-${maxkeyl}s\x1b[0m: %s" "${INFO[$info_index]}" "${infoval[$info_index]}"
+			printf "%s \x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" "$line" "${INFO[$info_index]}" "${infoval[$info_index]}"
 			let info_index++
 		else
-			echo -ne "\x1b[0m"
+			echo -n "$line"
+			echo -e "\x1b[0m"
 		fi
-		echo
-	done
+		let l++
+	done < "$ponyfile"
 fi
 
