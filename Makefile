@@ -1,3 +1,7 @@
+PREFIX?=/usr/local
+DATAROOT=$(PREFIX)/share
+DATADIR=$(DATAROOT)/ascii-pony
+BINDIR=$(PREFIX)/bin
 
 MAKEFILE=$(lastword $(MAKEFILE_LIST))
 MAKEFILE_DIR=$(dir $(MAKEFILE))
@@ -15,8 +19,15 @@ OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH) $(OUT_COLOR
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(subst ;,\\\;,$(wildcard $(PONY_DIR)/$(1)/*))
 
+INSTALL_DIR=cp -rf
+INSTALL_FILE=cp -f
+UNINSTALL_DIR=rm -rf
+UNINSTALL_FILE=rm -f
+REMOVE_DIR=$(foreach d, $(1), [ -d $(d) ] && rmdir $(d) || true;)
+MAKE_DIR=mkdir -p
+
 # NOTE: not .PONY :-P
-.PHONY: all show show_deps clean list random
+.PHONY: all show show_deps clean list random install uninstall
 
 all: $(OUT_ALL)
 
@@ -63,7 +74,7 @@ $(1) : $(OUT_DIR)/png/$(1).png
 endef
 define dir_rule_template
 $(1) : 
-	mkdir -p $(1)
+	$(MAKE_DIR) $(1)
 endef
 
 $(foreach pony,$(PONIES),$(eval $(call rule_template,$(pony))))
@@ -76,8 +87,8 @@ show_deps:
 	@$(foreach d,$(call find_deps,$(PONY)), echo $(d);)
 	
 clean:
-	rm -f $(OUT_ALL)
-	rmdir --ignore-fail-on-non-empty $(OUT_DIRS) $(OUT_DIR)
+	$(REMOVE_FILE) $(OUT_ALL)
+	$(call REMOVE_DIR, $(OUT_DIRS) $(OUT_DIR))
 
 list:
 	@$(foreach pony,$(PONIES), echo $(pony);)
@@ -85,3 +96,20 @@ list:
 random: PONY=$(shell make -f $(MAKEFILE) list | shuf | head -n 1)
 random: 
 	@make --no-print-directory -f $(MAKEFILE) show PONY=$(PONY)
+
+$(DATADIR):
+	$(MAKE_DIR) $(DATADIR)
+	
+$(BINDIR):
+	$(MAKE_DIR) $(BINDIR)
+
+install: $(OUT_ALL)
+install: $(DATADIR)
+install: $(BINDIR)
+	$(INSTALL_DIR) $(MAKEFILE_DIR)rendered $(DATADIR)
+	$(INSTALL_FILE) $(MAKEFILE_DIR)systempony $(BINDIR)
+	
+uninstall:
+	$(UNINSTALL_DIR) $(DATADIR)
+	$(UNINSTALL_FILE) $(BINDIR)/systempony
+	$(call REMOVE_DIR, $(DATADIR) $(DATAROOT) $(BINDIR))

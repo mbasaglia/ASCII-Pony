@@ -193,7 +193,7 @@ done
 
 SELFDIR=$(dirname $(readlink -se "${BASH_SOURCE[0]}"))
 ponydir="$SELFDIR/rendered/ansi/"
-[ ! -d "$ponydir" ] && ponydir="$SELFDIR/../share/systempony/rendered/ansi/"
+[ ! -d "$ponydir" ] && ponydir="$SELFDIR/../share/ascii-pony/rendered/ansi/"
 ponyfile="$ponydir/$PONY.colored.txt"
 
 if [ -f "$ponyfile" ]
