@@ -117,3 +117,4 @@ uninstall:
 #touch output files to avoid re-generations (eg: after cloning)
 touchput:
 	find $(MAKEFILE_DIR)rendered -exec touch {} \;
+	find $(MAKEFILE_DIR)rendered -name '*.png' -exec touch {} \;
