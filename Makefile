@@ -27,7 +27,7 @@ REMOVE_DIR=$(foreach d, $(1), [ -d $(d) ] && rmdir $(d) || true;)
 MAKE_DIR=mkdir -p
 
 # NOTE: not .PONY :-P
-.PHONY: all show show_deps clean list random install uninstall
+.PHONY: all show show_deps clean list random install uninstall touchput
 
 all: $(OUT_ALL)
 
@@ -113,3 +113,7 @@ uninstall:
 	$(UNINSTALL_DIR) $(DATADIR)
 	$(UNINSTALL_FILE) $(BINDIR)/systempony
 	$(call REMOVE_DIR, $(DATADIR) $(DATAROOT) $(BINDIR))
+
+#touch output files to avoid re-generations (eg: after cloning)
+touchput:
+	find $(MAKEFILE_DIR)rendered -exec touch {} \;
