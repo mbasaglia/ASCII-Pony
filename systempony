@@ -196,19 +196,74 @@ ponydir="$SELFDIR/rendered/ansi/"
 [ ! -d "$ponydir" ] && ponydir="$SELFDIR/../share/ascii-pony/rendered/ansi/"
 ponyfile="$ponydir/$PONY.colored.txt"
 
+# WARNING most of the variable names below this point are pretty bad and should be refactored
+
+declare -A ponyline # Number of characters before the system info output
+ponyline[applejack-nohat]=64
+ponyline[applejack]=70
+ponyline[bigmac]=42
+ponyline[celestia]=76
+ponyline[cadance]=55
+ponyline[derpy]=32
+ponyline[fluttershy]=67
+ponyline[great-and-powerful]=68
+ponyline[luna]=67
+ponyline[lyra]=61
+ponyline[pinkie-pie]=61
+ponyline[rainbow-dash]=61
+ponyline[rainbow]=61
+ponyline[rarity]=61
+ponyline[rose]=61
+ponyline[trixie]=61
+ponyline[twilight-alicorn]=61
+ponyline[twilight-unicorn]=61
+ponyline[vinyl-scratch-glasses]=69
+ponyline[vinyl-scratch-noglasses]=69
+
+declare -A ponystart # Number of lines before the system info output
+ponystart[luna]=18
+ponystart[rarity]=11
+ponystart[trixie]=16
+
 if [ -f "$ponyfile" ]
 then
 	lines=$(cat "$ponyfile" | wc -l) # cat to avoid printing file name
 	let info_index=0
-	let start_line=($lines-${#INFO[@]})/2
+	COLUMNS=$(tput cols)
+	
+	
+	if [ "${ponyline[$PONY]}" ]
+	then
+		linesize=${ponyline[$PONY]}
+	else
+		linesize=80
+	fi
+	
+	if [ "${ponystart[$PONY]}" ]
+	then
+		start_line=${ponystart[$PONY]}
+	else
+		let start_line=($lines-${#INFO[@]})/2
+	fi
+	
+	
 	
 	let l=1
 	while IFS= read -r  line
 	do
 		if [ $info_index -lt ${#INFO[@]} -a $l -ge $start_line ]
 		then
-			# TODO take in consideration $COLUMNS
-			printf "%s \x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" "$line" "${INFO[$info_index]}" "${infoval[$info_index]}"
+			let msgsize="$COLUMNS - $linesize - $maxkeyl - 3"
+			thislinesize=$(echo "$line" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c)
+			if [ $thislinesize -gt $linesize ]
+			then
+				let linediff="$thislinesize - $linesize"
+				line="$(echo "$line" | head -c -$linediff)";
+			fi
+			printf "%s \x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" \
+				"$line" \
+				"${INFO[$info_index]}" \
+				"$(echo -n "${infoval[$info_index]}" | head -c $msgsize)"
 			let info_index++
 		else
 			echo -n "$line"
