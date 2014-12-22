@@ -130,8 +130,14 @@ function help()
 	echo -e "\t\tThis option supports multiples IDs separated by commas, spaces or colons."
 	echo -e "\t\tAvailable IDs:"
 	declare -F | grep ponyget_ | sed "s/declare -f ponyget_/\t\t * /"	
-	echo
 	
+	title CONFIGURATION
+	echo -e "\tYou can override $(bold PONY) and $(bold INFO) in the config files."
+	echo -e "\tConfiguration files:"
+	echo -e "\t * $(underline PREFIX)$(bold /share/ascii-pony/systempony.conf) (system)"
+	echo -e "\t * $(bold ~/.systempony) (user)"
+	
+	echo
 }
 
 function select_info()
