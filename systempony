@@ -139,7 +139,33 @@ function select_info()
 	INFO=($(echo "${*}" | column -t -s:,))
 }
 
-# TODO read global and user config file
+SELFDIR=$(dirname $(readlink -se "${BASH_SOURCE[0]}"))
+function get_data_file()
+{
+	if [ -e "$SELFDIR/$1" ]
+	then
+		# Not installed
+		echo "$SELFDIR/$1"
+	elif [ -e "$SELFDIR/../share/ascii-pony/$1" ]
+	then
+		# Installed with PREFIX=$SELFDIR/..
+		echo "$SELFDIR/../share/ascii-pony/$1"
+	fi
+}
+
+# Read global config
+globalconfig=$(get_data_file systempony.conf)
+if [ -r "$globalconfig" ]
+then
+	source "$globalconfig"
+fi
+# Read user config
+if [ -r ~/.systempony ]
+then
+	source ~/.systempony
+fi
+
+# Read parameters
 while [ "$1" ]
 do
 	case "$1" in
@@ -170,6 +196,7 @@ do
 	shift
 done
 
+# Evaluate info
 infoval=()
 let maxkeyl=0
 let maxvall=0
@@ -191,9 +218,7 @@ do
 	fi
 done
 
-SELFDIR=$(dirname $(readlink -se "${BASH_SOURCE[0]}"))
-ponydir="$SELFDIR/rendered/ansi/"
-[ ! -d "$ponydir" ] && ponydir="$SELFDIR/../share/ascii-pony/rendered/ansi/"
+ponydir=$(get_data_file "rendered/ansi/")
 ponyfile="$ponydir/$PONY.colored.txt"
 
 # WARNING most of the variable names below this point are pretty bad and should be refactored
@@ -271,5 +296,14 @@ then
 		fi
 		let l++
 	done < "$ponyfile"
+else
+	let info_index=0
+	while [ $info_index -lt ${#INFO[@]} ]
+	do
+		printf "\x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" \
+			"${INFO[$info_index]}" \
+			"${infoval[$info_index]}"
+		let info_index++
+	done
 fi
 
