@@ -203,16 +203,16 @@ do
 done
 
 # Evaluate info
-infoval=()
-let maxkeyl=0
-let maxvall=0
+info_values=()
+let info_key_max_length=0
+let info_val_max_length=0
 function addinfo()
 {
-	infoval+=("${2}")
-	local keyl=$(echo "$1" | wc -c)
-	local vall=$(echo "${2}" | wc -c)
-	[ $keyl -gt $maxkeyl ] && maxkeyl=$keyl;
-	[ $vall -gt $maxvall ] && maxvall=$vall;
+	info_values+=("${2}")
+	local key_length=$(echo "$1" | wc -c)
+	local val_length=$(echo "${2}" | wc -c)
+	[ $key_length -gt $info_key_max_length ] && info_key_max_length=$key_length;
+	[ $val_length -gt $info_val_max_length ] && info_val_max_length=$val_length;
 }
 for info in ${INFO[*]}
 do
@@ -231,34 +231,33 @@ then
 	ponyfile="$(find rendered/ansi/ -name '*.colored.txt' | shuf | head -n 1)"
 fi
 
-# WARNING most of the variable names below this point are pretty bad and should be refactored
 
-declare -A ponyline # Number of characters before the system info output
-ponyline[applejack-nohat]=64
-ponyline[applejack]=70
-ponyline[bigmac]=42
-ponyline[celestia]=76
-ponyline[cadance]=55
-ponyline[derpy]=32
-ponyline[fluttershy]=67
-ponyline[great-and-powerful]=68
-ponyline[luna]=67
-ponyline[lyra]=61
-ponyline[pinkie-pie]=61
-ponyline[rainbow-dash]=61
-ponyline[rainbow]=61
-ponyline[rarity]=61
-ponyline[rose]=61
-ponyline[trixie]=61
-ponyline[twilight-alicorn]=61
-ponyline[twilight-unicorn]=61
-ponyline[vinyl-scratch-glasses]=69
-ponyline[vinyl-scratch-noglasses]=69
+declare -A info_firstx # Number of characters before the system info output
+info_firstx[applejack-nohat]=64
+info_firstx[applejack]=70
+info_firstx[bigmac]=42
+info_firstx[celestia]=76
+info_firstx[cadance]=55
+info_firstx[derpy]=32
+info_firstx[fluttershy]=67
+info_firstx[great-and-powerful]=68
+info_firstx[luna]=67
+info_firstx[lyra]=61
+info_firstx[pinkie-pie]=61
+info_firstx[rainbow-dash]=61
+info_firstx[rainbow]=61
+info_firstx[rarity]=61
+info_firstx[rose]=61
+info_firstx[trixie]=61
+info_firstx[twilight-alicorn]=61
+info_firstx[twilight-unicorn]=61
+info_firstx[vinyl-scratch-glasses]=69
+info_firstx[vinyl-scratch-noglasses]=69
 
-declare -A ponystart # Number of lines before the system info output
-ponystart[luna]=18
-ponystart[rarity]=11
-ponystart[trixie]=16
+declare -A info_firsty # Number of lines before the system info output
+info_firsty[luna]=18
+info_firsty[rarity]=11
+info_firsty[trixie]=16
 
 if [ -f "$ponyfile" ]
 then
@@ -267,52 +266,52 @@ then
 	COLUMNS=$(tput cols)
 	
 	
-	if [ "${ponyline[$PONY]}" ]
+	if [ "${info_firstx[$PONY]}" ]
 	then
-		linesize=${ponyline[$PONY]}
+		info_x=${info_firstx[$PONY]}
 	else
-		linesize=80
+		info_x=80
 	fi
 	
-	if [ "${ponystart[$PONY]}" ]
+	if [ "${info_firsty[$PONY]}" ]
 	then
-		start_line=${ponystart[$PONY]}
+		start_line=${info_firsty[$PONY]}
 	else
 		let start_line=($lines-${#INFO[@]})/2
 	fi
 	
 	
 	
-	let l=1
+	let current_line=1
 	while IFS= read -r  line
 	do
-		if [ $info_index -lt ${#INFO[@]} -a $l -ge $start_line ]
+		if [ $info_index -lt ${#INFO[@]} -a $current_line -ge $start_line ]
 		then
-			let msgsize="$COLUMNS - $linesize - $maxkeyl - 3"
-			thislinesize=$(echo "$line" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c)
-			if [ $thislinesize -gt $linesize ]
+			let msgsize="$COLUMNS - $info_x - $info_key_max_length - 3"
+			current_line_length=$(echo "$line" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c)
+			if [ $current_line_length -gt $info_x ]
 			then
-				let linediff="$thislinesize - $linesize"
+				let linediff="$current_line_length - $info_x"
 				line="$(echo "$line" | head -c -$linediff)";
 			fi
-			printf "%s \x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" \
+			printf "%s \x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s\n" \
 				"$line" \
 				"${INFO[$info_index]}" \
-				"$(echo -n "${infoval[$info_index]}" | head -c $msgsize)"
+				"$(echo -n "${info_values[$info_index]}" | head -c $msgsize)"
 			let info_index++
 		else
 			echo -n "$line"
 			echo -e "\x1b[0m"
 		fi
-		let l++
+		let current_line++
 	done < "$ponyfile"
 else
 	let info_index=0
 	while [ $info_index -lt ${#INFO[@]} ]
 	do
-		printf "\x1b[31;1m%-${maxkeyl}s\x1b[0m: %s\n" \
+		printf "\x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s\n" \
 			"${INFO[$info_index]}" \
-			"${infoval[$info_index]}"
+			"${info_values[$info_index]}"
 		let info_index++
 	done
 fi
