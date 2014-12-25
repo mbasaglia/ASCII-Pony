@@ -228,7 +228,7 @@ ponydir=$(get_data_file "rendered/ansi/")
 ponyfile="$ponydir/$PONY.colored.txt"
 if [ -n "$ponydir" -a '(' -z "$PONY" -o "$PONY" = random ')' ]
 then
-	ponyfile="$(find rendered/ansi/ -name '*.colored.txt' | shuf | head -n 1)"
+	ponyfile="$(find "$ponydir" -name '*.colored.txt' | shuf | head -n 1)"
 fi
 
 
