@@ -18,6 +18,18 @@ function ponyget_Distro()
 	lsb_release -isr | paste "-d " - -
 }
 
+function pccolor()
+{
+	local color="32";
+	if [ "$1" -gt 66 ]
+	then
+		color="31"
+	elif [ "$1" -gt 33 ]
+	then
+		color="33"
+	fi
+	echo -e "\x1b[$color;1m"
+}
 
 function ponyget_RAM()
 {
@@ -30,16 +42,8 @@ function ponyget_RAM()
 	local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
 	let percent="$used_M * 100 / $total_M"
 	
-	local color="32";
-	if [ "$percent" -gt 66 ]
-	then
-		color="31"
-	elif [ "$percent" -gt 33 ]
-	then
-		color="33"
-	fi
 	
-	echo -e "\x1b[$color;1m$used\x1b[0m / $total"
+	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
 }
 
 function ponyget_Kernel()
@@ -83,16 +87,7 @@ function ponyget_Disk()
 	local total=$(echo "$diskusage" | cut -f 2)
 	local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
 	
-	local color="32";
-	if [ "$percent" -gt 66 ]
-	then
-		color="31"
-	elif [ "$percent" -gt 33 ]
-	then
-		color="33"
-	fi
-	
-	echo -e "\x1b[$color;1m$used\x1b[0m / $total"
+	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
 }
 
 function bold()
