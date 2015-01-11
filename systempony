@@ -1,7 +1,12 @@
 #!/bin/bash
 
+# These global variables can be overridden by config
+# Name of the pony
 PONY=random
+# What info to show (must have a function defined as ponyget_* to work)
 INFO=( User Hostname Distro Kernel Uptime Shell Packages RAM Disk )
+# File system type to show disk usage (default/empty=all) (see df for specific values)
+FSTYPE=
 
 function ponyget_Shell()
 {
@@ -82,7 +87,9 @@ function ponyget_Packages()
 
 function ponyget_Disk()
 {
-	local diskusage=$(df -lh --total | tail -n 1 | sed -r "s/ +/\t/g" )
+	local dfoption=$FSTYPE
+	[ "$dfoption" ] && dfoption="-t $FSTYPE"
+	local diskusage=$(df -lh $dfoption --total | tail -n 1 | sed -r "s/ +/\t/g" )
 	local used=$(echo "$diskusage" | cut -f 3)
 	local total=$(echo "$diskusage" | cut -f 2)
 	local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
