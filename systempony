@@ -68,7 +68,8 @@ function ponyget_CPU()
 
 function ponyget_Uptime()
 {
-	uptime | grep -oE "up.*users" | sed -r "s/up\s*(.+),\s*[0-9]+\s*users/\1/"
+	uptime | grep -oE "up.*user" | \
+		sed -r -e "s/up\s*(.+),\s*[0-9]+\s*user/\1/" -e "s/\s+/ /g"
 }
 
 function ponyget_Packages()
