@@ -22,7 +22,22 @@ Available Characters
 * Big McIntosh
 * Princess Cadance
 
-Scripts and stuff
+System Pony
+-----------
+
+systempony is a script which shows a pony and system information.
+It can be installed system-wide with make install (PREFIX selects the directory).
+Global config is found in $PREFIX/share/ascii-pony/systempony.conf, 
+(or ./systempony.conf if not installed), user config is in ~/.systempony.
+
+Config Variables:
+* PONY   : pony identifier or "random", 
+           see "./systempony --list" for a list of identifiers
+* INFO   : array of system info to display, "./systempony -h" for a list
+* FSTYPE : file system type used to calculate disk usage (Uses df),
+           if empty it will show the total.
+
+Generating Images
 -----------------
 
 Each final character is divided into separate file, one for each color.
@@ -37,7 +52,7 @@ It produces the following kinds of output:
 Being a PHP script it requires PHP in order to run it.
 
 The makefile will compile all of the above, the plaintext in the same directory 
-as the parent of the directory containing the various part files, everythin else
+as the parent of the directory containing the various part files, everything else
 in /rendered.
 It will also call Inkscape to generate PNG images from the SVG.
 

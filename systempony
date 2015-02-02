@@ -132,7 +132,10 @@ function help()
 	echo -e "\t\tShow the given info (default: ${INFO[@]})."
 	echo -e "\t\tThis option supports multiples IDs separated by commas, spaces or colons."
 	echo -e "\t\tAvailable IDs:"
-	declare -F | grep ponyget_ | sed "s/declare -f ponyget_/\t\t * /"	
+	declare -F | grep ponyget_ | sed "s/declare -f ponyget_/\t\t * /"
+	echo
+	echo -e "\t$(bold --list), $(bold --list-ponies)"
+	echo -e "\t\tShows a list of possible values for $(bold --pony)."
 	
 	title CONFIGURATION
 	echo -e "\tYou can override $(bold PONY) and $(bold INFO) in the config files."
@@ -141,6 +144,14 @@ function help()
 	echo -e "\t * $(bold ~/.systempony) (user)"
 	
 	echo
+}
+
+
+function list_ponies()
+{
+	ponydir=$(get_data_file "rendered/ansi/")
+	echo random
+	find "$ponydir" -name '*.colored.txt' -exec basename {} .colored.txt \; | sort
 }
 
 function select_info()
@@ -180,6 +191,10 @@ do
 	case "$1" in
 		--help|-h|help)
 			help
+			exit 0
+			;;
+		--list|--list-ponies)
+			list_ponies
 			exit 0
 			;;
 		--pony)
