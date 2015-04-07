@@ -4,7 +4,7 @@
 # Name of the pony
 PONY=random
 # What info to show (must have a function defined as ponyget_* to work)
-INFO=( User Hostname Distro Kernel Uptime Shell Packages RAM Disk )
+INFO=( User Hostname Distro Kernel Uptime Load Shell Packages RAM Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
 FSTYPE=
 
@@ -70,6 +70,11 @@ function ponyget_Uptime()
 {
 	uptime | grep -oE "up.*user" | \
 		sed -r -e "s/up\s*(.+),\s*[0-9]+\s*user/\1/" -e "s/\s+/ /g"
+}
+
+function ponyget_Load()
+{
+    uptime | sed -r -e "s/.*load average:\s*//"
 }
 
 function ponyget_Packages()
