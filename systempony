@@ -163,7 +163,6 @@ function help()
 	echo
 }
 
-
 function list_ponies()
 {
 	ponydir=$(get_data_file "rendered/ansi/")
@@ -188,6 +187,26 @@ function get_data_file()
 		# Installed with PREFIX=$SELFDIR/..
 		echo "$SELFDIR/../share/ascii-pony/$1"
 	fi
+}
+
+# Returns the number of displayed characters, ignoring color codes
+function strlen_color()
+{
+	echo -n "$1" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c
+}
+
+# Truncates a string
+function truncate_color()
+{
+	local length="$(strlen_color "$1")"
+	local target="$2"
+	if [ "$length" -gt "$target" ]
+	then
+		let cut="$target-$length"
+		echo -n "$1" | head -c $cut
+		return
+	fi
+	echo "$1"
 }
 
 # Read global config
@@ -322,17 +341,12 @@ then
 	do
 		if [ $info_index -lt ${#INFO[@]} -a $current_line -ge $start_line ]
 		then
-			let msgsize="$COLUMNS - $info_x - $info_key_max_length - 3"
-			current_line_length=$(echo "$line" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c)
-			if [ $current_line_length -gt $info_x ]
-			then
-				let linediff="$current_line_length - $info_x"
-				line="$(echo "$line" | head -c -$linediff)";
-			fi
-			printf "%s \x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s\n" \
-				"$line" \
+			let msgsize="$COLUMNS - $info_x - $info_key_max_length - 4"
+			line="$(truncate_color "$line" $info_x)"
+			printf "%s \x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s %s\n" \
+				"$line$backspaces" \
 				"${INFO[$info_index]}" \
-				"$(echo -n "${info_values[$info_index]}" | head -c $msgsize)"
+				"$(truncate_color "${info_values[$info_index]}" $msgsize)"
 			let info_index++
 		else
 			echo -n "$line"
