@@ -4,7 +4,7 @@
 # Name of the pony
 PONY=random
 # What info to show (must have a function defined as ponyget_* to work)
-INFO=( User Hostname Distro Kernel Uptime Load Shell Packages RAM Disk)
+INFO=(User Hostname Distro Kernel Uptime Load Shell Packages RAM Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
 FSTYPE=
 
@@ -101,6 +101,18 @@ function ponyget_Disk()
 	local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
 	
 	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
+}
+
+function ponyget_Containers()
+{
+	local active="$(lxc-ls --active | wc -l)"
+	local total="$(lxc-ls | wc -l)"
+	local color=32
+	if [ "$active" -lt "$total" ]
+	then
+		color=31
+	fi
+	echo -e "\x1b[$color;1m$active\x1b[0m / $total active"
 }
 
 function bold()

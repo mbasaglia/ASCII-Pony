@@ -37,6 +37,10 @@ Config Variables:
 * FSTYPE : file system type used to calculate disk usage (Uses df),
            if empty it will show the total.
 
+Requirements:
+    * lsb-release for Dirstro
+    * lxc for Containers
+
 Generating Images
 -----------------
 
