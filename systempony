@@ -278,11 +278,16 @@ do
 	fi
 done
 
-ponydir=$(get_data_file "rendered/ansi/")
-ponyfile="$ponydir/$PONY.colored.txt"
-if [ -n "$ponydir" -a '(' -z "$PONY" -o "$PONY" = random ')' ]
+if [ "$PONY" = nopony ]
 then
-	ponyfile="$(find "$ponydir" -name '*.colored.txt' | shuf | head -n 1)"
+	ponyfile=/dev/null
+else
+	ponydir=$(get_data_file "rendered/ansi/")
+	ponyfile="$ponydir/$PONY.colored.txt"
+	if [ -n "$ponydir" -a '(' \! -f "$ponyfile" -o "$PONY" = random ')' ]
+	then
+		ponyfile="$(find "$ponydir" -name '*.colored.txt' | shuf | head -n 1)"
+	fi
 fi
 
 
