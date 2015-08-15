@@ -202,6 +202,11 @@ class IRCColorOutput extends PlaintextColorOutput
 
 	function color( Color $color )
 	{
+		return "\x03".$this->color_code($color);
+	}
+
+	function color_code( Color $color )
+	{
 		if ( $color->bright )
 		{
 			switch( $color->color )
@@ -240,8 +245,13 @@ class AnsiColorOutput extends PlainTextColorOutput
 
 	function color( Color $color )
 	{
+		return "\x1b[".$this->color_code($color)."m";
+	}
+
+	function color_code( Color $color )
+	{
 		$bold = $color->bright ? "1" : "22";
-		return "\x1b[{$color->color};{$bold}m";
+		return (30+$color->color).";{$bold}";
 	}
 
 }
@@ -261,6 +271,11 @@ class BashColorOutput extends AnsiColorOutput
 	function escape( $char )
 	{
 		return $char == '\\' ? '\\\\' : $char;
+	}
+
+	function color( Color $color )
+	{
+		return "\\x1b[".$this->color_code($color)."m";
 	}
 }
 
