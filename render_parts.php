@@ -280,21 +280,6 @@ class BashColorOutput extends AnsiColorOutput
 }
 
 $dir = isset($argv[1]) ? $argv[1] : getcwd();
-const COLORED_TEXT = 0;
-const PLAIN_TEXT   = 1;
-const SVG          = 2;
-const BASH         = 3;
-const IRC_TEXT     = 4;
-if ( !isset($argv[2]) )
-    $output_type = COLORED_TEXT;
-else if ( $argv[2] == 'nocolor' )
-    $output_type = PLAIN_TEXT;
-else if ( $argv[2] == 'svg' )
-    $output_type = SVG;
-else if ( $argv[2] == 'bash' )
-    $output_type = BASH;
-else if ( $argv[2] == 'irc' )
-    $output_type = IRC_TEXT;
     
 $dir_files = scandir($dir);
 $files = array();
@@ -332,25 +317,26 @@ foreach ( $files as $color => $lines )
     }
 
 /// \todo factory
-if ( $output_type == SVG )
+$output_type = isset($argv[2]) ? $argv[2] : "";
+if ( $output_type == 'svg' )
 {
 	$output = new SvgColorOutput($maxw, $maxh);
 }
-else if ( $output_type == BASH )
+else if ( $output_type == 'bash' )
 {
 	$output = new BashColorOutput();
 }
-else if ( $output_type == IRC_TEXT )
+else if ( $output_type == 'irc' )
 {
 	$output = new IrcColorOutput($maxw);
 }
-else if ( $output_type == COLORED_TEXT )
+else if ( $output_type == 'nocolor' )
 {
-	$output = new AnsiColorOutput();
+	$output = new PlainTextColorOutput();
 }
 else
 {
-	$output = new PlainTextColorOutput();
+	$output = new AnsiColorOutput();
 }
 
 $output->begin();
