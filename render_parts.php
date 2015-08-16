@@ -2,6 +2,14 @@
 <?php
 defined( "ENT_XML1") or define("ENT_XML1",16);
 
+ini_set("display_errors", "stderr");
+function print_error_and_die($errno, $errstr, $errfile, $errline)
+{
+    error_log("$errfile:$errline: $errstr");
+    exit(1);
+}
+set_error_handler("print_error_and_die",E_ALL);
+
 class Color
 {
 	public $color = 7;
@@ -287,10 +295,17 @@ $maxw = 0;
 $maxh = 0;
 foreach($dir_files as $file)
 {
-    if ( preg_match("/([0-9]+;)*[0-9]+/",$file) !== false )
+	$match = array();
+    if ( preg_match("/([a-z]+)(?:_(dark|bright))?/", $file, $match) !== false &&
+			isset($match[1]) && isset(Color::$names_to_int[$match[1]]) )
     {
+		$bright = isset($match[2]) ? $match[2] == 'bright' : false;
         $curr_file = file("$dir/$file",FILE_IGNORE_NEW_LINES);
-        $files[$file] = $curr_file;
+        $color = new Color(Color::$names_to_int[$match[1]], $bright);
+        $file_obj = new stdClass;
+		$file_obj->color = $color;
+		$file_obj->lines = $curr_file;
+        $files[] = $file_obj;
         foreach($curr_file as &$line)
         {
             $line = rtrim($line);
@@ -306,13 +321,13 @@ foreach($dir_files as $file)
 
 $chars=array_fill(0,$maxh,array_fill(0,$maxw,null));
 
-foreach ( $files as $color => $lines )
-    for ( $i = 0; $i < count($lines); $i++ )
+foreach ( $files as $file )
+    for ( $i = 0; $i < count($file->lines); $i++ )
     {
-        for ( $j = 0, $l = strlen($lines[$i]); $j < $l; $j++ )
+        for ( $j = 0, $l = strlen($file->lines[$i]); $j < $l; $j++ )
         {
-            if ( $lines[$i][$j] != ' ' )
-                $chars[$i][$j] = array("color"=>Color::from_ansi($color),"char"=>$lines[$i][$j]);
+            if ( $file->lines[$i][$j] != ' ' )
+                $chars[$i][$j] = array("color"=>$file->color,"char"=>$file->lines[$i][$j]);
         }
     }
 
