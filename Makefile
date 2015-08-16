@@ -22,7 +22,8 @@ find_deps=$(subst ;,\\\;,$(wildcard $(PONY_DIR)/$(1)/*))
 INSTALL_DIR=cp -rf
 INSTALL_FILE=cp -f
 UNINSTALL_DIR=rm -rf
-UNINSTALL_FILE=rm -f
+REMOVE_FILE=rm -f
+UNINSTALL_FILE=$(UNINSTALL_FILE)
 REMOVE_DIR=$(foreach d, $(1), [ -d $(d) ] && rmdir $(d) || true;)
 MAKE_DIR=mkdir -p
 
@@ -70,6 +71,16 @@ $(1) : $(OUT_DIR)/sh/$(1).sh
 $(1) : $(OUT_DIR)/irc/$(1).irc.txt
 $(1) : $(OUT_DIR)/png/$(1).png
 	@cat $(OUT_DIR)/ansi/$(1).colored.txt
+
+.PHONY: clean_$(1)
+clean_$(1):
+	$(REMOVE_FILE) $(OUT_DIR)/ansi/$(1).colored.txt
+	$(REMOVE_FILE) $(PONY_DIR)/$(1).txt
+	$(REMOVE_FILE) $(OUT_DIR)/svg/$(1).svg
+	$(REMOVE_FILE) $(OUT_DIR)/sh/$(1).sh
+	$(REMOVE_FILE) $(OUT_DIR)/irc/$(1).irc.txt
+	$(REMOVE_FILE) $(OUT_DIR)/png/$(1).png
+
 
 endef
 define dir_rule_template
