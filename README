@@ -28,11 +28,11 @@ System Pony
 
 systempony is a script which shows a pony and system information.
 It can be installed system-wide with make install (PREFIX selects the directory).
-Global config is found in $PREFIX/share/ascii-pony/systempony.conf, 
+Global config is found in $PREFIX/share/ascii-pony/systempony.conf,
 (or ./systempony.conf if not installed), user config is in ~/.systempony.
 
 Config Variables:
-* PONY   : pony identifier or "random", 
+* PONY   : pony identifier or "random",
            see "./systempony --list" for a list of identifiers
 * INFO   : array of system info to display, "./systempony -h" for a list
 * FSTYPE : file system type used to calculate disk usage (Uses df),
@@ -56,15 +56,15 @@ It produces the following kinds of output:
 
 Being a PHP script it requires PHP in order to run it.
 
-The makefile will compile all of the above, the plaintext in the same directory 
+The makefile will compile all of the above, the plaintext in the same directory
 as the parent of the directory containing the various part files, everything else
 in /rendered.
 It will also call Inkscape to generate PNG images from the SVG.
 
-You can cat the colored files on a terminal to see the fancy output (as long as 
+You can cat the colored files on a terminal to see the fancy output (as long as
 the terminal supports colors).
 
-Some blank ponies and a template directory can be found inside the 
+Some blank ponies and a template directory can be found inside the
 directory /Generic
 
 License
