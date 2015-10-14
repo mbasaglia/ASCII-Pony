@@ -6,14 +6,14 @@ ASCII art of some characters from My Little Pony: Friendship is magic.
 Available Characters
 --------------------
 
-* Twilight Sparkle (Both as unicorn and as alicorn)
-* Rainbow Dash (Both with open and closed wing)
+* Twilight Sparkle (Both as a unicorn and as an alicorn)
+* Rainbow Dash (Both with open and with closed wings)
 * Fluttershy
-* Rairy
+* Rarity
 * Pinkie Pie
-* Applejack (Both with and without hat)
+* Applejack (Both with and without the hat)
 * Derpy
-* Trixie (Both with and without hat)
+* Trixie (Both with and without the hat)
 * Rose
 * Lyra Heartstrings
 * DJ Pon3 (Both with and without shades)
@@ -27,25 +27,27 @@ System Pony
 -----------
 
 systempony is a script which shows a pony and system information.
-It can be installed system-wide with make install (PREFIX selects the directory).
-Global config is found in $PREFIX/share/ascii-pony/systempony.conf, 
+It can be installed system-wide using "make install" (PREFIX selects the
+target directory).
+
+The global config is found in $PREFIX/share/ascii-pony/systempony.conf,
 (or ./systempony.conf if not installed), user config is in ~/.systempony.
 
 Config Variables:
-* PONY   : pony identifier or "random", 
+* PONY   : a pony identifier or "random",
            see "./systempony --list" for a list of identifiers
-* INFO   : array of system info to display, "./systempony -h" for a list
-* FSTYPE : file system type used to calculate disk usage (Uses df),
+* INFO   : an array of system info to display, "./systempony -h" for a list
+* FSTYPE : a file system type used to calculate disk usage (Uses df),
            if empty it will show the total.
 
 Requirements:
-    * lsb-release for Dirstro
+    * lsb-release for Distro
     * lxc for Containers
 
 Generating Images
 -----------------
 
-Each final character is divided into separate file, one for each color.
+Each final character is divided into a separate file, one for each color.
 The file name is what you'd put in an ANSI escape to make it colored.
 The script render_parts.php takes a directory as input and scans for such files.
 It produces the following kinds of output:
@@ -54,17 +56,18 @@ It produces the following kinds of output:
 * Plaintext (if you pass nocolor)
 * SVG (if you pass svg)
 
-Being a PHP script it requires PHP in order to run it.
+Being a PHP script, it requires PHP in order to run.
 
-The makefile will compile all of the above, the plaintext in the same directory 
-as the parent of the directory containing the various part files, everything else
-in /rendered.
+The makefile will compile all of the above, the plaintext in the same directory
+as the parent of the directory containing the various part files,
+and everything else in /rendered.
+
 It will also call Inkscape to generate PNG images from the SVG.
 
-You can cat the colored files on a terminal to see the fancy output (as long as 
+You can cat the colored files on a terminal to see the fancy output (as long as
 the terminal supports colors).
 
-Some blank ponies and a template directory can be found inside the 
+Some blank ponies and a template directory can be found inside the
 directory /Generic
 
 License
@@ -72,5 +75,5 @@ License
 
 Dual:
 
-* GPLv3+ http://www.gnu.org/licenses/gpl.html
-* CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/
+* GPLv3+ : http://www.gnu.org/licenses/gpl.html
+* CC-BY-SA 3.0 : http://creativecommons.org/licenses/by-sa/3.0/
