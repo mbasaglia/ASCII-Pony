@@ -4,7 +4,7 @@
 # Name of the pony
 PONY=random
 # What info to show (must have a function defined as ponyget_* to work)
-INFO=(User Hostname Distro Kernel Uptime Load Shell Packages RAM Disk)
+INFO=(User Hostname Distro Kernel Uptime Load Shell Packages RAM Swap Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
 FSTYPE=
 
@@ -42,13 +42,28 @@ function ponyget_RAM()
 	local used=$(echo "$ramtable" | sed -n 3p | sed -r "s/ +/\t/g"  | cut -f 3)
 	local total=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
 	
-	local ramtable=$(free -m)
+	ramtable=$(free -m)
 	local used_M=$(echo "$ramtable" | sed -n 3p | sed -r "s/ +/\t/g"  | cut -f 3)
 	local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
 	let percent="$used_M * 100 / $total_M"
 	
 	
 	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
+}
+
+function ponyget_Swap()
+{
+    local swaptable=$(free -h | grep Swap)
+    local used=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 3)
+    local total=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 2)
+
+    swaptable=$(free -m | grep Swap)
+    local used_M=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 3)
+    local total_M=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 2)
+    let percent="$used_M * 100 / $total_M"
+
+
+    echo -e "$(pccolor $percent)$used\x1b[0m / $total"
 }
 
 function ponyget_Kernel()
