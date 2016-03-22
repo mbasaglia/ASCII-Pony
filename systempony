@@ -38,12 +38,12 @@ function pccolor()
 
 function ponyget_RAM()
 {
-	local ramtable=$(free -h)
-	local used=$(echo "$ramtable" | sed -n 3p | sed -r "s/ +/\t/g"  | cut -f 3)
+	local ramtable=$(free -h | head -n -1)
+	local used=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
 	local total=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
 	
-	ramtable=$(free -m)
-	local used_M=$(echo "$ramtable" | sed -n 3p | sed -r "s/ +/\t/g"  | cut -f 3)
+	ramtable=$(free -m | head -n -1)
+	local used_M=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
 	local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
 	let percent="$used_M * 100 / $total_M"
 	
