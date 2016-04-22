@@ -83,7 +83,7 @@ function ponyget_CPU()
 
 function ponyget_CPU_Usage()
 {
-    echo "$(top -b -n1 | grep "Cpu(s):" | sed -r -e "s/^[^0-9]+//" -e "s/[^0-9]+,\s+/ + /g" -e "s/[^0-9]+$//" | cut -d ' ' -f 1-5 | bc)%"
+    printf %.1f%% "$(top -b -n1 | grep "Cpu(s):" | sed -r -e "s/^[^0-9]+//" -e "s/[^0-9]+,\s+/ + /g" -e "s/[^0-9]+$//" | cut -d ' ' -f 1-5 | bc)"
 }
 
 function ponyget_Uptime()

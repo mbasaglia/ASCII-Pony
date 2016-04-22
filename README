@@ -43,6 +43,7 @@ Config Variables:
 Requirements:
     * lsb-release for Distro
     * lxc for Containers
+    * bc for CPU_Usage
 
 Generating Images
 -----------------
