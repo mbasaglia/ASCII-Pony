@@ -81,6 +81,11 @@ function ponyget_CPU()
 	cat /proc/cpuinfo | grep "model name" | head -n 1 | sed -r "s/model name\s: //"
 }
 
+function ponyget_CPU_Usage()
+{
+    echo "$(top -b -n1 | grep "Cpu(s):" | sed -r -e "s/^[^0-9]+//" -e "s/[^0-9]+,\s+/ + /g" -e "s/[^0-9]+$//" | cut -d ' ' -f 1-5 | bc)%"
+}
+
 function ponyget_Uptime()
 {
 	uptime | grep -oE "up.*user" | \
