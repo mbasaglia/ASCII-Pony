@@ -72,6 +72,23 @@ the terminal supports colors).
 Some blank ponies and a template directory can be found inside the
 directory /Generic
 
+Installing as MOTD
+------------------
+
+### pam.d
+
+Ensure /etc/pam.d/login has the following line:
+
+    session    optional   pam_motd.so  motd=/run/motd.dynamic
+
+Note it does not end with `noupdate`.
+
+Then (for a single pony picture) copy one of the files under rendered/sh to 
+/etc/update-motd.d with a name like 20-pony or something like that.
+
+If instead you want to use systempony in the motd, first install it system-wide
+(with `make install`), then create the appropriate script that would call it.
+
 License
 -------
 
