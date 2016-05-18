@@ -347,7 +347,7 @@ if [ -f "$ponyfile" ]
 then
 	lines=$(cat "$ponyfile" | wc -l) # cat to avoid printing file name
 	let info_index=0
-	COLUMNS=$(tput cols)
+	COLUMNS=$(tput cols || echo 1024)
 	
 	
 	if [ "${info_firstx[$PONY]}" ]
