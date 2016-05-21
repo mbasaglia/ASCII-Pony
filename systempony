@@ -12,7 +12,7 @@ IP_INTERFACE="eth0"
 
 function ponyget_Shell()
 {
-	grep $USER /etc/passwd | cut -f7 -d:
+	echo "$SHELL"
 }
 
 function ponyget_User()
