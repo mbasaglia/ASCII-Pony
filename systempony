@@ -7,6 +7,8 @@ PONY=random
 INFO=(User Hostname IP Distro Kernel Uptime Load Shell Packages RAM Swap Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
 FSTYPE=
+# Interface to get the IP address from
+IP_INTERFACE="eth0"
 
 function ponyget_Shell()
 {
@@ -137,7 +139,13 @@ function ponyget_Containers()
 
 function ponyget_IP()
 {
-    ip -o addr | grep -vE "lo\s+inet" | grep -Po "inet6?\s*\K[^/]+" | xargs echo
+    [ -z "$1" ] && inet="inet" || inet="$1"
+    ip -o addr | grep -vE "lo\s+inet" | grep -F "$IP_INTERFACE" | grep -Po "$inet\s+\K[^/]+" | xargs echo
+}
+
+function ponyget_IPv6()
+{
+    ponyget_IP inet6
 }
 
 function bold()
