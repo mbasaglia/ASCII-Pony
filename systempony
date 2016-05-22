@@ -171,14 +171,14 @@ function help()
 	echo -e "\t$(bold $0) - show a pony and some system information"
 	
 	title SYNOPSIS
-	echo -e "\t$(bold $0) [$(bold --pony) $(underline pony)|$(bold -p=)$(underline pony)] [$(bold --info) $(underline id)|$(bold -i=)$(underline id)...]"
+	echo -e "\t$(bold $0) [$(bold --pony) $(underline pony)|$(bold -p)$(underline pony)] [$(bold --info) $(underline id)|$(bold -i)$(underline id)...]"
 	echo -e "\t$(bold $0) $(bold help)|$(bold --help)|$(bold -h)"
 	
 	title OPTIONS
-	echo -e "\t$(bold --pony) $(underline pony), $(bold -p=)$(underline pony)"
+	echo -e "\t$(bold --pony) $(underline pony), $(bold -p)$(underline pony)"
 	echo -e "\t\tSelect a pony (default: $PONY)."
 	echo
-	echo -e "\t$(bold --info) $(underline id), $(bold -i=)$(underline id)"
+	echo -e "\t$(bold --info) $(underline id), $(bold -i)$(underline id)"
 	echo -e "\t\tShow the given info (default: ${INFO[@]})."
 	echo -e "\t\tThis option supports multiples IDs separated by commas, spaces or colons."
 	echo -e "\t\tAvailable IDs:"
@@ -266,24 +266,24 @@ do
 			list_ponies
 			exit 0
 			;;
-		--pony)
+		--pony|-p)
 			shift
-			PONY=$1
+			PONY="$1"
 			;;
-		-p=*)
-			PONY=$(echo "$1" | sed "s/-p=//")
+		-p=*|--pony=*)
+			PONY="$(echo "$1" | sed -r "s/^(-p|--pony)=//")"
 			;;
-		--info)
+		--info|-i)
 			infostring=""
 			while [ "$2" ] && ! echo "$2" | grep -q -e "-"
 			do
 				infostring="$infostring $2"
 				shift
 			done
-			select_info $infostring
+			select_info "$infostring"
 			;;
-		-i=*)
-			select_info "$(echo "$1" | sed "s/-i=//")"
+		-i=*|--info=*)
+			select_info "$(echo "$1" | sed -r "s/^(-i|--info)=//")"
 			;;
 	esac
 	shift
