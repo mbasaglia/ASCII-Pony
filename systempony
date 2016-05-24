@@ -311,7 +311,10 @@ do
     fi
 done
 
-if [ "$PONY" = nopony ]
+if [ -f "$PONY" ]
+then
+    ponyfile="$PONY"
+elif [ "$PONY" = nopony ]
 then
     ponyfile=/dev/null
 else
