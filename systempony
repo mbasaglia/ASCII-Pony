@@ -12,45 +12,45 @@ IP_INTERFACE="eth0"
 
 function ponyget_Shell()
 {
-	echo "$SHELL"
+    echo "$SHELL"
 }
 
 function ponyget_User()
 {
-	whoami
+    whoami
 }
 
 function ponyget_Distro()
 {
-	lsb_release -isr | paste "-d " - -
+    lsb_release -isr | paste "-d " - -
 }
 
 function pccolor()
 {
-	local color="32";
-	if [ "$1" -gt 66 ]
-	then
-		color="31"
-	elif [ "$1" -gt 33 ]
-	then
-		color="33"
-	fi
-	echo -e "\x1b[$color;1m"
+    local color="32";
+    if [ "$1" -gt 66 ]
+    then
+        color="31"
+    elif [ "$1" -gt 33 ]
+    then
+        color="33"
+    fi
+    echo -e "\x1b[$color;1m"
 }
 
 function ponyget_RAM()
 {
-	local ramtable=$(free -h | head -n -1)
-	local used=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
-	local total=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
-	
-	ramtable=$(free -m | head -n -1)
-	local used_M=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
-	local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
-	let percent="$used_M * 100 / $total_M"
-	
-	
-	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
+    local ramtable=$(free -h | head -n -1)
+    local used=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
+    local total=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
+
+    ramtable=$(free -m | head -n -1)
+    local used_M=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
+    local total_M=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
+    let percent="$used_M * 100 / $total_M"
+
+
+    echo -e "$(pccolor $percent)$used\x1b[0m / $total"
 }
 
 function ponyget_Swap()
@@ -70,17 +70,17 @@ function ponyget_Swap()
 
 function ponyget_Kernel()
 {
-	uname -r -m
+    uname -r -m
 }
 
 function ponyget_Hostname()
 {
-	hostname
+    hostname
 }
 
 function ponyget_CPU()
 {
-	cat /proc/cpuinfo | grep "model name" | head -n 1 | sed -r "s/model name\s: //"
+    cat /proc/cpuinfo | grep "model name" | head -n 1 | sed -r "s/model name\s: //"
 }
 
 function ponyget_CPU_Usage()
@@ -90,8 +90,8 @@ function ponyget_CPU_Usage()
 
 function ponyget_Uptime()
 {
-	uptime | grep -oE "up.*user" | \
-		sed -r -e "s/up\s*(.+),\s*[0-9]+\s*user/\1/" -e "s/\s+/ /g"
+    uptime | grep -oE "up.*user" | \
+        sed -r -e "s/up\s*(.+),\s*[0-9]+\s*user/\1/" -e "s/\s+/ /g"
 }
 
 function ponyget_Load()
@@ -101,40 +101,40 @@ function ponyget_Load()
 
 function ponyget_Packages()
 {
-	if which dpkg &>/dev/null
-	then
-		dpkg --get-selections | grep -v deinstall | wc -l
-	elif which rpm &>/dev/null
-	then
-		rpm -qa | wc -l
-	elif which pacman &>/dev/null
-	then
-		pacman -Q | wc -l
-	fi 
+    if which dpkg &>/dev/null
+    then
+        dpkg --get-selections | grep -v deinstall | wc -l
+    elif which rpm &>/dev/null
+    then
+        rpm -qa | wc -l
+    elif which pacman &>/dev/null
+    then
+        pacman -Q | wc -l
+    fi
 }
 
 function ponyget_Disk()
 {
-	local dfoption=$FSTYPE
-	[ "$dfoption" ] && dfoption="-t $FSTYPE"
-	local diskusage=$(df -lh $dfoption --total | tail -n 1 | sed -r "s/ +/\t/g" )
-	local used=$(echo "$diskusage" | cut -f 3)
-	local total=$(echo "$diskusage" | cut -f 2)
-	local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
-	
-	echo -e "$(pccolor $percent)$used\x1b[0m / $total"
+    local dfoption=$FSTYPE
+    [ "$dfoption" ] && dfoption="-t $FSTYPE"
+    local diskusage=$(df -lh $dfoption --total | tail -n 1 | sed -r "s/ +/\t/g" )
+    local used=$(echo "$diskusage" | cut -f 3)
+    local total=$(echo "$diskusage" | cut -f 2)
+    local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
+
+    echo -e "$(pccolor $percent)$used\x1b[0m / $total"
 }
 
 function ponyget_Containers()
 {
-	local active="$(lxc-ls --active | wc -l)"
-	local total="$(lxc-ls | wc -l)"
-	local color=32
-	if [ "$active" -lt "$total" ]
-	then
-		color=31
-	fi
-	echo -e "\x1b[$color;1m$active\x1b[0m / $total active"
+    local active="$(lxc-ls --active | wc -l)"
+    local total="$(lxc-ls | wc -l)"
+    local color=32
+    if [ "$active" -lt "$total" ]
+    then
+        color=31
+    fi
+    echo -e "\x1b[$color;1m$active\x1b[0m / $total active"
 }
 
 function ponyget_IP()
@@ -150,143 +150,143 @@ function ponyget_IPv6()
 
 function bold()
 {
-	echo -en "\x1b[1m${*}\x1b[22m"
+    echo -en "\x1b[1m${*}\x1b[22m"
 }
 
 function underline()
 {
-	echo -en "\x1b[4m${*}\x1b[24m"
+    echo -en "\x1b[4m${*}\x1b[24m"
 }
 
 function title()
 {
-	echo
-	bold ${*}
-	echo
+    echo
+    bold ${*}
+    echo
 }
 
 function help()
 {
-	title NAME
-	echo -e "\t$(bold $0) - show a pony and some system information"
-	
-	title SYNOPSIS
-	echo -e "\t$(bold $0) [$(bold --pony) $(underline pony)|$(bold -p)$(underline pony)] [$(bold --info) $(underline id)|$(bold -i)$(underline id)...]"
-	echo -e "\t$(bold $0) $(bold help)|$(bold --help)|$(bold -h)"
-	
-	title OPTIONS
-	echo -e "\t$(bold --pony) $(underline pony), $(bold -p)$(underline pony)"
-	echo -e "\t\tSelect a pony (default: $PONY)."
-	echo
-	echo -e "\t$(bold --info) $(underline id), $(bold -i)$(underline id)"
-	echo -e "\t\tShow the given info (default: ${INFO[@]})."
-	echo -e "\t\tThis option supports multiples IDs separated by commas, spaces or colons."
-	echo -e "\t\tAvailable IDs:"
-	declare -F | grep ponyget_ | sed "s/declare -f ponyget_/\t\t * /"
-	echo
-	echo -e "\t$(bold --list), $(bold --list-ponies)"
-	echo -e "\t\tShows a list of possible values for $(bold --pony)."
-	
-	title CONFIGURATION
-	echo -e "\tYou can override $(bold PONY) and $(bold INFO) in the config files."
-	echo -e "\tConfiguration files:"
-	echo -e "\t * $(underline PREFIX)$(bold /share/ascii-pony/systempony.conf) (system)"
-	echo -e "\t * $(bold ~/.systempony) (user)"
-	
-	echo
+    title NAME
+    echo -e "\t$(bold $0) - show a pony and some system information"
+
+    title SYNOPSIS
+    echo -e "\t$(bold $0) [$(bold --pony) $(underline pony)|$(bold -p)$(underline pony)] [$(bold --info) $(underline id)|$(bold -i)$(underline id)...]"
+    echo -e "\t$(bold $0) $(bold help)|$(bold --help)|$(bold -h)"
+
+    title OPTIONS
+    echo -e "\t$(bold --pony) $(underline pony), $(bold -p)$(underline pony)"
+    echo -e "\t\tSelect a pony (default: $PONY)."
+    echo
+    echo -e "\t$(bold --info) $(underline id), $(bold -i)$(underline id)"
+    echo -e "\t\tShow the given info (default: ${INFO[@]})."
+    echo -e "\t\tThis option supports multiples IDs separated by commas, spaces or colons."
+    echo -e "\t\tAvailable IDs:"
+    declare -F | grep ponyget_ | sed "s/declare -f ponyget_/\t\t * /"
+    echo
+    echo -e "\t$(bold --list), $(bold --list-ponies)"
+    echo -e "\t\tShows a list of possible values for $(bold --pony)."
+
+    title CONFIGURATION
+    echo -e "\tYou can override $(bold PONY) and $(bold INFO) in the config files."
+    echo -e "\tConfiguration files:"
+    echo -e "\t * $(underline PREFIX)$(bold /share/ascii-pony/systempony.conf) (system)"
+    echo -e "\t * $(bold ~/.systempony) (user)"
+
+    echo
 }
 
 function list_ponies()
 {
-	ponydir=$(get_data_file "rendered/ansi/")
-	echo random
-	find "$ponydir" -name '*.ansi' -exec basename {} .ansi \; | sort
+    ponydir=$(get_data_file "rendered/ansi/")
+    echo random
+    find "$ponydir" -name '*.ansi' -exec basename {} .ansi \; | sort
 }
 
 function select_info()
 {
-	INFO=($(echo "${*}" | column -t -s:,))
+    INFO=($(echo "${*}" | column -t -s:,))
 }
 
 SELFDIR=$(dirname $(readlink -se "${BASH_SOURCE[0]}"))
 function get_data_file()
 {
-	if [ -e "$SELFDIR/$1" ]
-	then
-		# Not installed
-		echo "$SELFDIR/$1"
-	elif [ -e "$SELFDIR/../share/ascii-pony/$1" ]
-	then
-		# Installed with PREFIX=$SELFDIR/..
-		echo "$SELFDIR/../share/ascii-pony/$1"
-	fi
+    if [ -e "$SELFDIR/$1" ]
+    then
+        # Not installed
+        echo "$SELFDIR/$1"
+    elif [ -e "$SELFDIR/../share/ascii-pony/$1" ]
+    then
+        # Installed with PREFIX=$SELFDIR/..
+        echo "$SELFDIR/../share/ascii-pony/$1"
+    fi
 }
 
 # Returns the number of displayed characters, ignoring color codes
 function strlen_color()
 {
-	echo -n "$1" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c
+    echo -n "$1" | sed -r 's/\x1b\[[0-9;]+m//g' | wc -c
 }
 
 # Truncates a string
 function truncate_color()
 {
-	local length="$(strlen_color "$1")"
-	local target="$2"
-	if [ "$length" -gt "$target" ]
-	then
-		let cut="$target-$length"
-		echo -n "$1" | head -c $cut
-		return
-	fi
-	echo "$1"
+    local length="$(strlen_color "$1")"
+    local target="$2"
+    if [ "$length" -gt "$target" ]
+    then
+        let cut="$target-$length"
+        echo -n "$1" | head -c $cut
+        return
+    fi
+    echo "$1"
 }
 
 # Read global config
 globalconfig=$(get_data_file systempony.conf)
 if [ -r "$globalconfig" ]
 then
-	source "$globalconfig"
+    source "$globalconfig"
 fi
 # Read user config
 if [ -r ~/.systempony ]
 then
-	source ~/.systempony
+    source ~/.systempony
 fi
 
 # Read parameters
 while [ "$1" ]
 do
-	case "$1" in
-		--help|-h|help)
-			help
-			exit 0
-			;;
-		--list|--list-ponies)
-			list_ponies
-			exit 0
-			;;
-		--pony|-p)
-			shift
-			PONY="$1"
-			;;
-		-p=*|--pony=*)
-			PONY="$(echo "$1" | sed -r "s/^(-p|--pony)=//")"
-			;;
-		--info|-i)
-			infostring=""
-			while [ "$2" ] && ! echo "$2" | grep -q -e "-"
-			do
-				infostring="$infostring $2"
-				shift
-			done
-			select_info "$infostring"
-			;;
-		-i=*|--info=*)
-			select_info "$(echo "$1" | sed -r "s/^(-i|--info)=//")"
-			;;
-	esac
-	shift
+    case "$1" in
+        --help|-h|help)
+            help
+            exit 0
+            ;;
+        --list|--list-ponies)
+            list_ponies
+            exit 0
+            ;;
+        --pony|-p)
+            shift
+            PONY="$1"
+            ;;
+        -p=*|--pony=*)
+            PONY="$(echo "$1" | sed -r "s/^(-p|--pony)=//")"
+            ;;
+        --info|-i)
+            infostring=""
+            while [ "$2" ] && ! echo "$2" | grep -q -e "-"
+            do
+                infostring="$infostring $2"
+                shift
+            done
+            select_info "$infostring"
+            ;;
+        -i=*|--info=*)
+            select_info "$(echo "$1" | sed -r "s/^(-i|--info)=//")"
+            ;;
+    esac
+    shift
 done
 
 # Evaluate info
@@ -295,32 +295,32 @@ let info_key_max_length=0
 let info_val_max_length=0
 function addinfo()
 {
-	info_values+=("${2}")
-	local key_length=$(echo "$1" | wc -c)
-	local val_length=$(echo "${2}" | wc -c)
-	[ $key_length -gt $info_key_max_length ] && info_key_max_length=$key_length;
-	[ $val_length -gt $info_val_max_length ] && info_val_max_length=$val_length;
+    info_values+=("${2}")
+    local key_length=$(echo "$1" | wc -c)
+    local val_length=$(echo "${2}" | wc -c)
+    [ $key_length -gt $info_key_max_length ] && info_key_max_length=$key_length;
+    [ $val_length -gt $info_val_max_length ] && info_val_max_length=$val_length;
 }
 for info in ${INFO[*]}
 do
-	if [ "$(type -t ponyget_${info})" = "function" ]
-	then
-		addinfo $info "$(ponyget_${info})"
-	else
-		addinfo $info "unsupported"
-	fi
+    if [ "$(type -t ponyget_${info})" = "function" ]
+    then
+        addinfo $info "$(ponyget_${info})"
+    else
+        addinfo $info "unsupported"
+    fi
 done
 
 if [ "$PONY" = nopony ]
 then
-	ponyfile=/dev/null
+    ponyfile=/dev/null
 else
-	ponydir=$(get_data_file "rendered/ansi/")
-	ponyfile="$ponydir/$PONY.ansi"
-	if [ -n "$ponydir" -a '(' \! -f "$ponyfile" -o "$PONY" = random ')' ]
-	then
-		ponyfile="$(find "$ponydir" -name '*.ansi' | shuf | head -n 1)"
-	fi
+    ponydir=$(get_data_file "rendered/ansi/")
+    ponyfile="$ponydir/$PONY.ansi"
+    if [ -n "$ponydir" -a '(' \! -f "$ponyfile" -o "$PONY" = random ')' ]
+    then
+        ponyfile="$(find "$ponydir" -name '*.ansi' | shuf | head -n 1)"
+    fi
 fi
 
 
@@ -353,53 +353,53 @@ info_firsty[trixie]=16
 
 if [ -f "$ponyfile" ]
 then
-	lines=$(cat "$ponyfile" | wc -l) # cat to avoid printing file name
-	let info_index=0
-	COLUMNS=$(tput cols || echo 1024)
-	
-	
-	if [ "${info_firstx[$PONY]}" ]
-	then
-		info_x=${info_firstx[$PONY]}
-	else
-		info_x=80
-	fi
-	
-	if [ "${info_firsty[$PONY]}" ]
-	then
-		start_line=${info_firsty[$PONY]}
-	else
-		let start_line=($lines-${#INFO[@]})/2
-	fi
-	
-	
-	
-	let current_line=1
-	while IFS= read -r  line
-	do
-		if [ $info_index -lt ${#INFO[@]} -a $current_line -ge $start_line ]
-		then
-			let msgsize="$COLUMNS - $info_x - $info_key_max_length - 4"
-			line="$(truncate_color "$line" $info_x)"
-			printf "%s \x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s %s\n" \
-				"$line$backspaces" \
-				"${INFO[$info_index]}" \
-				"$(truncate_color "${info_values[$info_index]}" $msgsize)"
-			let info_index++
-		else
-			echo -n "$line"
-			echo -e "\x1b[0m"
-		fi
-		let current_line++
-	done < "$ponyfile"
+    lines=$(cat "$ponyfile" | wc -l) # cat to avoid printing file name
+    let info_index=0
+    COLUMNS=$(tput cols || echo 1024)
+
+
+    if [ "${info_firstx[$PONY]}" ]
+    then
+        info_x=${info_firstx[$PONY]}
+    else
+        info_x=80
+    fi
+
+    if [ "${info_firsty[$PONY]}" ]
+    then
+        start_line=${info_firsty[$PONY]}
+    else
+        let start_line=($lines-${#INFO[@]})/2
+    fi
+
+
+
+    let current_line=1
+    while IFS= read -r  line
+    do
+        if [ $info_index -lt ${#INFO[@]} -a $current_line -ge $start_line ]
+        then
+            let msgsize="$COLUMNS - $info_x - $info_key_max_length - 4"
+            line="$(truncate_color "$line" $info_x)"
+            printf "%s \x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s %s\n" \
+                "$line$backspaces" \
+                "${INFO[$info_index]}" \
+                "$(truncate_color "${info_values[$info_index]}" $msgsize)"
+            let info_index++
+        else
+            echo -n "$line"
+            echo -e "\x1b[0m"
+        fi
+        let current_line++
+    done < "$ponyfile"
 else
-	let info_index=0
-	while [ $info_index -lt ${#INFO[@]} ]
-	do
-		printf "\x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s\n" \
-			"${INFO[$info_index]}" \
-			"${info_values[$info_index]}"
-		let info_index++
-	done
+    let info_index=0
+    while [ $info_index -lt ${#INFO[@]} ]
+    do
+        printf "\x1b[31;1m%-${info_key_max_length}s\x1b[0m: %s\n" \
+            "${INFO[$info_index]}" \
+            "${info_values[$info_index]}"
+        let info_index++
+    done
 fi
 
