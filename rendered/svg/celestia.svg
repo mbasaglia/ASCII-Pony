@@ -1,274 +1,154 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' width='486.0' height='396'>
-<rect style='fill:#000000;stroke:none;' width='486.0' height='396' x='0' y='0' />
+<svg xmlns='http://www.w3.org/2000/svg' width='480.0' height='384'>
+<rect style='fill:#000000;stroke:none;' width='480.0' height='384' x='0' y='0' />
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#54ff54;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                                                 </tspan>
-<tspan x='0' y='36'>                                                                                 </tspan>
-<tspan x='0' y='48'>                                                 _                               </tspan>
-<tspan x='0' y='60'>                                              -'` \                              </tspan>
-<tspan x='0' y='72'>                                                   :                             </tspan>
-<tspan x='0' y='84'>                                                   |                             </tspan>
+<tspan x='0' y='48'>                                                 _</tspan>
+<tspan x='0' y='60'>                                              -'` \</tspan>
+<tspan x='0' y='72'>                                                   :</tspan>
+<tspan x='0' y='84'>                                                   |</tspan>
 <tspan x='0' y='96'>                                      \  \ \       |          _</tspan>
 <tspan x='0' y='108'>                                       '-.__\      (      .-'` `.</tspan>
-<tspan x='0' y='120'>                                                    `---``      )                </tspan>
-<tspan x='0' y='132'>                                                                /                </tspan>
-<tspan x='0' y='144'>                                                                \                </tspan>
-<tspan x='0' y='156'>                                                                 `''--.,         </tspan>
-<tspan x='0' y='168'>                                                                        )        </tspan>
-<tspan x='0' y='180'>                                                                        )        </tspan>
-<tspan x='0' y='192'>                                                                        /        </tspan>
-<tspan x='0' y='204'>                                                                       (         </tspan>
-<tspan x='0' y='216'>                                                                        `      </tspan>
-<tspan x='0' y='228'>        </tspan>
-<tspan x='0' y='240'>                                   </tspan>
-<tspan x='0' y='252'>                                   </tspan>
-<tspan x='0' y='264'>                       _                                 </tspan>
-<tspan x='0' y='276'>                   .-'`                                                          </tspan>
-<tspan x='0' y='288'>                 /`                                                              </tspan>
-<tspan x='0' y='300'>                (_                                _                              </tspan>
-<tspan x='0' y='312'>                 /       ___             .''``''`` `\                            </tspan>
-<tspan x='0' y='324'>                 ``''''``   \        --'`            \           ..              </tspan>
-<tspan x='0' y='336'>                            (__,..-'`                (        .-`  \         </tspan>
-<tspan x='0' y='348'>                                                      \__.'''`               </tspan>
-<tspan x='0' y='360'>                        </tspan>
-<tspan x='0' y='372'>                                    </tspan>
-<tspan x='0' y='384'>                               </tspan>
+<tspan x='0' y='120'>                                                    `---``      )</tspan>
+<tspan x='0' y='132'>                                                                /</tspan>
+<tspan x='0' y='144'>                                                                \</tspan>
+<tspan x='0' y='156'>                                                                 `''--.,</tspan>
+<tspan x='0' y='168'>                                                                        )</tspan>
+<tspan x='0' y='180'>                                                                        )</tspan>
+<tspan x='0' y='192'>                                                                        /</tspan>
+<tspan x='0' y='204'>                                                                       (</tspan>
+<tspan x='0' y='216'>                                                                        `</tspan>
+<tspan x='0' y='264'>                       _</tspan>
+<tspan x='0' y='276'>                   .-'`</tspan>
+<tspan x='0' y='288'>                 /`</tspan>
+<tspan x='0' y='300'>                (_                                _</tspan>
+<tspan x='0' y='312'>                 /       ___             .''``''`` `\</tspan>
+<tspan x='0' y='324'>                 ``''''``   \        --'`            \           ..</tspan>
+<tspan x='0' y='336'>                            (__,..-'`                (        .-`  \</tspan>
+<tspan x='0' y='348'>                                                      \__.'''`</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#686868;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                  </tspan>
-<tspan x='0' y='36'>                                                            </tspan>
-<tspan x='0' y='48'>                                      </tspan>
-<tspan x='0' y='60'>                              </tspan>
-<tspan x='0' y='72'>                             </tspan>
-<tspan x='0' y='84'>                             </tspan>
-<tspan x='0' y='96'>               </tspan>
-<tspan x='0' y='108'>               </tspan>
-<tspan x='0' y='120'>                                    \__.          </tspan>
+<tspan x='0' y='120'>                                    \__.</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b218b2;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                                           </tspan>
-<tspan x='0' y='36'>                                                                     </tspan>
-<tspan x='0' y='48'>                                                                 </tspan>
-<tspan x='0' y='60'>                                                        </tspan>
-<tspan x='0' y='72'>                                       /\                           </tspan>
-<tspan x='0' y='84'>                                       \/                          </tspan>
-<tspan x='0' y='96'>                                                      </tspan>
-<tspan x='0' y='108'>             </tspan>
-<tspan x='0' y='120'>              </tspan>
-<tspan x='0' y='132'>               </tspan>
-<tspan x='0' y='144'>               </tspan>
-<tspan x='0' y='156'>                                     </tspan>
-<tspan x='0' y='168'>                                       </tspan>
-<tspan x='0' y='180'>                                   </tspan>
-<tspan x='0' y='192'>                                         A       </tspan>
-<tspan x='0' y='204'>                                         V       </tspan>
+<tspan x='0' y='72'>                                       /\</tspan>
+<tspan x='0' y='84'>                                       \/</tspan>
+<tspan x='0' y='192'>                                         A</tspan>
+<tspan x='0' y='204'>                                         V</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#54ffff;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                                                 </tspan>
-<tspan x='0' y='36'>                                                 ___                             </tspan>
-<tspan x='0' y='48'>                                    ___        '`   `'.                          </tspan>
-<tspan x='0' y='60'>                                 .-'      u           )                          </tspan>
-<tspan x='0' y='72'>                               .'                     |                          </tspan>
-<tspan x='0' y='84'>                              /                       |                          </tspan>
+<tspan x='0' y='36'>                                                 ___</tspan>
+<tspan x='0' y='48'>                                    ___        '`   `'.</tspan>
+<tspan x='0' y='60'>                                 .-'      u           )</tspan>
+<tspan x='0' y='72'>                               .'                     |</tspan>
+<tspan x='0' y='84'>                              /                       |</tspan>
 <tspan x='0' y='96'>                             :                        (   _.-.</tspan>
 <tspan x='0' y='108'>                             | ( /.                    `''</tspan>
-<tspan x='0' y='120'>                             | \  )                 </tspan>
-<tspan x='0' y='132'>                             |  '`                </tspan>
+<tspan x='0' y='120'>                             | \  )</tspan>
+<tspan x='0' y='132'>                             |  '`</tspan>
 <tspan x='0' y='144'>                             (</tspan>
 <tspan x='0' y='156'>                              \</tspan>
-<tspan x='0' y='168'>                               \ </tspan>
-<tspan x='0' y='180'>      </tspan>
-<tspan x='0' y='192'>         </tspan>
-<tspan x='0' y='204'>       </tspan>
-<tspan x='0' y='216'> </tspan>
-<tspan x='0' y='228'>        </tspan>
-<tspan x='0' y='240'>                                    </tspan>
-<tspan x='0' y='252'>                                   </tspan>
-<tspan x='0' y='264'>                                 </tspan>
-<tspan x='0' y='276'>                        (                                   </tspan>
-<tspan x='0' y='288'>                         \                        ,.---.                         </tspan>
-<tspan x='0' y='300'>                          `--''`````\         .-'`      \                        </tspan>
-<tspan x='0' y='312'>                                    /                    .                       </tspan>
-<tspan x='0' y='324'>                                    `                    |         --.           </tspan>
-<tspan x='0' y='336'>                                                         '\           \          </tspan>
-<tspan x='0' y='348'>                                                                             </tspan>
+<tspan x='0' y='168'>                               \</tspan>
+<tspan x='0' y='276'>                        (</tspan>
+<tspan x='0' y='288'>                         \                        ,.---.</tspan>
+<tspan x='0' y='300'>                          `--''`````\         .-'`      \</tspan>
+<tspan x='0' y='312'>                                    /                    .</tspan>
+<tspan x='0' y='324'>                                    `                    |         --.</tspan>
+<tspan x='0' y='336'>                                                         '\           \</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b2b2b2;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                         </tspan>
-<tspan x='0' y='36'>                                                     </tspan>
-<tspan x='0' y='48'>                                                </tspan>
-<tspan x='0' y='60'>                           _                  </tspan>
-<tspan x='0' y='72'>                          ` \          </tspan>
-<tspan x='0' y='84'>                    .--.    .)                         </tspan>
-<tspan x='0' y='96'>                .-'`  .|   .|                 </tspan>
-<tspan x='0' y='108'>             .'`      |'   |'                        </tspan>
-<tspan x='0' y='120'>          .-`         |    |                             </tspan>
-<tspan x='0' y='132'>         (_.'         |   .|                        </tspan>
-<tspan x='0' y='144'>          /   .       |   |'                              </tspan>
-<tspan x='0' y='156'>         (_.-'        |   |                             </tspan>
-<tspan x='0' y='168'>            /  /      |   :                                       </tspan>
-<tspan x='0' y='180'>           (  /       |   (             </tspan>
+<tspan x='0' y='60'>                           _</tspan>
+<tspan x='0' y='72'>                          ` \</tspan>
+<tspan x='0' y='84'>                    .--.    .)</tspan>
+<tspan x='0' y='96'>                .-'`  .|   .|</tspan>
+<tspan x='0' y='108'>             .'`      |'   |'</tspan>
+<tspan x='0' y='120'>          .-`         |    |</tspan>
+<tspan x='0' y='132'>         (_.'         |   .|</tspan>
+<tspan x='0' y='144'>          /   .       |   |'</tspan>
+<tspan x='0' y='156'>         (_.-'        |   |</tspan>
+<tspan x='0' y='168'>            /  /      |   :</tspan>
+<tspan x='0' y='180'>           (  /       |   (</tspan>
 <tspan x='0' y='192'>            ``(  .'   (    '..-'</tspan>
-<tspan x='0' y='204'>               '`'  .  \              </tspan>
-<tspan x='0' y='216'>                 `'`(_. `''        </tspan>
-<tspan x='0' y='228'>               </tspan>
-<tspan x='0' y='240'>                                  </tspan>
+<tspan x='0' y='204'>               '`'  .  \</tspan>
+<tspan x='0' y='216'>                 `'`(_. `''</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b26818;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                                           </tspan>
-<tspan x='0' y='36'>                                                                     </tspan>
-<tspan x='0' y='48'>                                                              </tspan>
-<tspan x='0' y='60'>                                                    </tspan>
-<tspan x='0' y='72'>                                                               </tspan>
-<tspan x='0' y='84'>                                                       </tspan>
-<tspan x='0' y='96'>                                         </tspan>
-<tspan x='0' y='108'>             </tspan>
-<tspan x='0' y='120'>              </tspan>
-<tspan x='0' y='132'>               </tspan>
-<tspan x='0' y='144'>               </tspan>
-<tspan x='0' y='156'>                                   </tspan>
-<tspan x='0' y='168'>                                </tspan>
-<tspan x='0' y='180'>                              </tspan>
-<tspan x='0' y='192'>                                   </tspan>
-<tspan x='0' y='204'>                                       </tspan>
-<tspan x='0' y='216'>                                          </tspan>
-<tspan x='0' y='228'>                                       </tspan>
-<tspan x='0' y='240'>                                   </tspan>
-<tspan x='0' y='252'>                                   </tspan>
-<tspan x='0' y='264'>                          . . ,                                                  </tspan>
-<tspan x='0' y='276'>                          -   -                                           </tspan>
-<tspan x='0' y='288'>                          ' ' `                                   </tspan>
-<tspan x='0' y='300'>                                      </tspan>
+<tspan x='0' y='264'>                          . . ,</tspan>
+<tspan x='0' y='276'>                          -   -</tspan>
+<tspan x='0' y='288'>                          ' ' `</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#ffffff;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                              ,'/                                </tspan>
-<tspan x='0' y='36'>                                             . /                          </tspan>
-<tspan x='0' y='48'>                                            / /                         </tspan>
-<tspan x='0' y='60'>                       __                  / /                            </tspan>
-<tspan x='0' y='72'>                  .-'``  \       .')      / /                               </tspan>
-<tspan x='0' y='84'>               .'`        )     / /      / /                                </tspan>
-<tspan x='0' y='96'>            .'`          .'               /                     </tspan>
-<tspan x='0' y='108'>          ,'             |                                           </tspan>
-<tspan x='0' y='120'>        .'              .|                |                             </tspan>
-<tspan x='0' y='132'>      .'                |'     (   ,_     `.                            </tspan>
-<tspan x='0' y='144'>    .'                  |       \    `\-.-'                                </tspan>
-<tspan x='0' y='156'>   -  .                 |              \                            </tspan>
-<tspan x='0' y='168'> .` .'  .               |               \                              </tspan>
-<tspan x='0' y='180'> '-'/  /                :       |       </tspan>
-<tspan x='0' y='192'>   /  /    /            (       :'          </tspan>
-<tspan x='0' y='204'>  /  /    /              '---''`              </tspan>
-<tspan x='0' y='216'> '  /    /    /                .'`     </tspan>
-<tspan x='0' y='228'>(  /    /    /   /  /  / / ,'-`      |  | \         </tspan>
-<tspan x='0' y='240'> '`/   /    /   /  /  /.''`.'        |  :  \                                     </tspan>
-<tspan x='0' y='252'>  /   /    /   /  /`-'    /  ..---.  |  '.  \                                    </tspan>
-<tspan x='0' y='264'> (   //   /   /(_/       /         )/|.  '.  \                                   </tspan>
-<tspan x='0' y='276'>  `-'(   /   /                    /  '|   '.                                   </tspan>
-<tspan x='0' y='288'>      `-'`--'                   .'    |.                           </tspan>
-<tspan x='0' y='300'>                                      '|                       </tspan>
-<tspan x='0' y='312'>                                       ' </tspan>
+<tspan x='0' y='24'>                                              ,'/</tspan>
+<tspan x='0' y='36'>                                             . /</tspan>
+<tspan x='0' y='48'>                                            / /</tspan>
+<tspan x='0' y='60'>                       __                  / /</tspan>
+<tspan x='0' y='72'>                  .-'``  \       .')      / /</tspan>
+<tspan x='0' y='84'>               .'`        )     / /      / /</tspan>
+<tspan x='0' y='96'>            .'`          .'               /</tspan>
+<tspan x='0' y='108'>          ,'             |</tspan>
+<tspan x='0' y='120'>        .'              .|                |</tspan>
+<tspan x='0' y='132'>      .'                |'     (   ,_     `.</tspan>
+<tspan x='0' y='144'>    .'                  |       \    `\-.-'</tspan>
+<tspan x='0' y='156'>   -  .                 |              \</tspan>
+<tspan x='0' y='168'> .` .'  .               |               \</tspan>
+<tspan x='0' y='180'> '-'/  /                :       |</tspan>
+<tspan x='0' y='192'>   /  /    /            (       :'</tspan>
+<tspan x='0' y='204'>  /  /    /              '---''`</tspan>
+<tspan x='0' y='216'> '  /    /    /                .'`</tspan>
+<tspan x='0' y='228'>(  /    /    /   /  /  / / ,'-`      |  | \</tspan>
+<tspan x='0' y='240'> '`/   /    /   /  /  /.''`.'        |  :  \</tspan>
+<tspan x='0' y='252'>  /   /    /   /  /`-'    /  ..---.  |  '.  \</tspan>
+<tspan x='0' y='264'> (   //   /   /(_/       /         )/|.  '.  \</tspan>
+<tspan x='0' y='276'>  `-'(   /   /                    /  '|   '.</tspan>
+<tspan x='0' y='288'>      `-'`--'                   .'    |.</tspan>
+<tspan x='0' y='300'>                                      '|</tspan>
+<tspan x='0' y='312'>                                       '</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#ff54ff;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                  </tspan>
-<tspan x='0' y='36'>                                           </tspan>
-<tspan x='0' y='48'>                                               </tspan>
-<tspan x='0' y='60'>                          </tspan>
-<tspan x='0' y='72'>                       </tspan>
-<tspan x='0' y='84'>                       </tspan>
-<tspan x='0' y='96'>                </tspan>
-<tspan x='0' y='108'> </tspan>
-<tspan x='0' y='120'>                     </tspan>
-<tspan x='0' y='132'>             </tspan>
-<tspan x='0' y='144'>             </tspan>
 <tspan x='0' y='156'>                                            __</tspan>
-<tspan x='0' y='168'>                                         .'`  '.       .--.            </tspan>
-<tspan x='0' y='180'>                                                \    .'    )       __        </tspan>
-<tspan x='0' y='192'>                                                 \_.'      (_ .---:  )       </tspan>
-<tspan x='0' y='204'>                                            `-.            .-`     '.(           </tspan>
-<tspan x='0' y='216'>                                               `-..___..-'`          \   .'      </tspan>
-<tspan x='0' y='228'>                                                                      ''`        </tspan>
-<tspan x='0' y='240'>                                    </tspan>
-<tspan x='0' y='252'>                                  </tspan>
-<tspan x='0' y='264'>                             </tspan>
-<tspan x='0' y='276'>                                </tspan>
-<tspan x='0' y='288'>                       </tspan>
-<tspan x='0' y='300'>                      </tspan>
-<tspan x='0' y='312'>                    </tspan>
-<tspan x='0' y='324'>           </tspan>
-<tspan x='0' y='336'>     </tspan>
-<tspan x='0' y='348'>                                                                              .' </tspan>
-<tspan x='0' y='360'>                                                  __        .-''.     .-'``''`   </tspan>
-<tspan x='0' y='372'>                                               .-'  `\   .'`     \_.-'           </tspan>
+<tspan x='0' y='168'>                                         .'`  '.       .--.</tspan>
+<tspan x='0' y='180'>                                                \    .'    )       __</tspan>
+<tspan x='0' y='192'>                                                 \_.'      (_ .---:  )</tspan>
+<tspan x='0' y='204'>                                            `-.            .-`     '.(</tspan>
+<tspan x='0' y='216'>                                               `-..___..-'`          \   .'</tspan>
+<tspan x='0' y='228'>                                                                      ''`</tspan>
+<tspan x='0' y='348'>                                                                              .'</tspan>
+<tspan x='0' y='360'>                                                  __        .-''.     .-'``''`</tspan>
+<tspan x='0' y='372'>                                               .-'  `\   .'`     \_.-'</tspan>
 <tspan x='0' y='384'>                               '.__________.-'`       `'`</tspan>
-<tspan x='0' y='396'>                               </tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#d6d646;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                                           </tspan>
-<tspan x='0' y='36'>                                                                     </tspan>
-<tspan x='0' y='48'>                                       /\                            </tspan>
-<tspan x='0' y='60'>                                     :v  :                        </tspan>
-<tspan x='0' y='72'>                                     )                              </tspan>
-<tspan x='0' y='84'>                                   -'__                            </tspan>
-<tspan x='0' y='96'>                               @_-'``                 </tspan>
-<tspan x='0' y='108'>             </tspan>
-<tspan x='0' y='120'>              </tspan>
-<tspan x='0' y='132'>               </tspan>
-<tspan x='0' y='144'>               </tspan>
-<tspan x='0' y='156'>                                |\       </tspan>
-<tspan x='0' y='168'>                                | `-._       </tspan>
-<tspan x='0' y='180'>                                 '-,  `-.)\       </tspan>
-<tspan x='0' y='192'>                                    `-,    )        </tspan>
-<tspan x='0' y='204'>                                       \   )        </tspan>
-<tspan x='0' y='216'>                                        )-'     </tspan>
-<tspan x='0' y='228'>                                       </tspan>
-<tspan x='0' y='240'>                                   </tspan>
-<tspan x='0' y='252'>                                   </tspan>
-<tspan x='0' y='264'>                                                                                 </tspan>
-<tspan x='0' y='276'>                           (_)               (\                                  </tspan>
-<tspan x='0' y='288'>                                          ('.` \                                 </tspan>
+<tspan x='0' y='48'>                                       /\</tspan>
+<tspan x='0' y='60'>                                     :v  :</tspan>
+<tspan x='0' y='72'>                                     )</tspan>
+<tspan x='0' y='84'>                                   -'__</tspan>
+<tspan x='0' y='96'>                               @_-'``</tspan>
+<tspan x='0' y='156'>                                |\</tspan>
+<tspan x='0' y='168'>                                | `-._</tspan>
+<tspan x='0' y='180'>                                 '-,  `-.)\</tspan>
+<tspan x='0' y='192'>                                    `-,    )</tspan>
+<tspan x='0' y='204'>                                       \   )</tspan>
+<tspan x='0' y='216'>                                        )-'</tspan>
+<tspan x='0' y='276'>                           (_)               (\</tspan>
+<tspan x='0' y='288'>                                          ('.` \</tspan>
 <tspan x='0' y='300'>                                         .-` \</tspan>
-<tspan x='0' y='312'>                                        . </tspan>
+<tspan x='0' y='312'>                                        .</tspan>
 </text>
 <text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#5454ff;letter-spacing:-1.2px' xml:space='preserve'>
-<tspan x='0' y='12'>                                                                                 </tspan>
-<tspan x='0' y='24'>                                                        </tspan>
-<tspan x='0' y='36'>                                  </tspan>
-<tspan x='0' y='48'>                        </tspan>
-<tspan x='0' y='60'>                        </tspan>
-<tspan x='0' y='72'>                                </tspan>
-<tspan x='0' y='84'>                                           </tspan>
-<tspan x='0' y='96'>                                            ..--.                      </tspan>
-<tspan x='0' y='108'>                                                 )                  </tspan>
-<tspan x='0' y='120'>                                                 |                    </tspan>
-<tspan x='0' y='132'>                                                 :       .--.                 </tspan>
-<tspan x='0' y='144'>                                                  \  .-'`    |                </tspan>
-<tspan x='0' y='156'>                                                   ``        |           </tspan>
-<tspan x='0' y='168'>                                                             `-..-'``'.      </tspan>
-<tspan x='0' y='180'>                                                                      )         </tspan>
-<tspan x='0' y='192'>                                                                      |          </tspan>
-<tspan x='0' y='204'>                                                                      (          </tspan>
-<tspan x='0' y='216'>                                                                       ` .'      </tspan>
-<tspan x='0' y='228'>           </tspan>
-<tspan x='0' y='240'>                                    </tspan>
-<tspan x='0' y='252'>                               </tspan>
-<tspan x='0' y='264'>                              </tspan>
-<tspan x='0' y='276'>                                                                      </tspan>
-<tspan x='0' y='288'>                                                           </tspan>
-<tspan x='0' y='300'>                                                          </tspan>
-<tspan x='0' y='312'>                                                       </tspan>
-<tspan x='0' y='324'>                (                             </tspan>
-<tspan x='0' y='336'>                 \                           ___                 __      .--.  </tspan>
-<tspan x='0' y='348'>                  '-..----..,          ,.-'``   `-.            ,'  ``--``    ' </tspan>
-<tspan x='0' y='360'>                             \     .-'`            \     .--.-'                  </tspan>
-<tspan x='0' y='372'>                              \.-'`                 ` `'`                        </tspan>
-<tspan x='0' y='384'>                                                         </tspan>
+<tspan x='0' y='96'>                                            ..--.</tspan>
+<tspan x='0' y='108'>                                                 )</tspan>
+<tspan x='0' y='120'>                                                 |</tspan>
+<tspan x='0' y='132'>                                                 :       .--.</tspan>
+<tspan x='0' y='144'>                                                  \  .-'`    |</tspan>
+<tspan x='0' y='156'>                                                   ``        |</tspan>
+<tspan x='0' y='168'>                                                             `-..-'``'.</tspan>
+<tspan x='0' y='180'>                                                                      )</tspan>
+<tspan x='0' y='192'>                                                                      |</tspan>
+<tspan x='0' y='204'>                                                                      (</tspan>
+<tspan x='0' y='216'>                                                                       ` .'</tspan>
+<tspan x='0' y='324'>                (</tspan>
+<tspan x='0' y='336'>                 \                           ___                 __      .--.</tspan>
+<tspan x='0' y='348'>                  '-..----..,          ,.-'``   `-.            ,'  ``--``    '</tspan>
+<tspan x='0' y='360'>                             \     .-'`            \     .--.-'</tspan>
+<tspan x='0' y='372'>                              \.-'`                 ` `'`</tspan>
 </text>
 </svg>

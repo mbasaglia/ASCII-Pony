@@ -33,7 +33,6 @@ read -r -d '' Heredoc_var <<'Heredoc_var'
              :     .'                                                   
               \\  .'                                                     
                '`                                                       
-                                                                        
 \x1b[0m
 Heredoc_var
 echo -e "$Heredoc_var"
