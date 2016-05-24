@@ -200,7 +200,7 @@ function list_ponies()
 {
 	ponydir=$(get_data_file "rendered/ansi/")
 	echo random
-	find "$ponydir" -name '*.colored.txt' -exec basename {} .colored.txt \; | sort
+	find "$ponydir" -name '*.ansi' -exec basename {} .ansi \; | sort
 }
 
 function select_info()
@@ -316,10 +316,10 @@ then
 	ponyfile=/dev/null
 else
 	ponydir=$(get_data_file "rendered/ansi/")
-	ponyfile="$ponydir/$PONY.colored.txt"
+	ponyfile="$ponydir/$PONY.ansi"
 	if [ -n "$ponydir" -a '(' \! -f "$ponyfile" -o "$PONY" = random ')' ]
 	then
-		ponyfile="$(find "$ponydir" -name '*.colored.txt' | shuf | head -n 1)"
+		ponyfile="$(find "$ponydir" -name '*.ansi' | shuf | head -n 1)"
 	fi
 fi
 
