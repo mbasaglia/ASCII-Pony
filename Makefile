@@ -6,18 +6,14 @@ BINDIR=$(PREFIX)/bin
 MAKEFILE=$(lastword $(MAKEFILE_LIST))
 MAKEFILE_DIR=$(dir $(MAKEFILE))
 PONY_DIR=$(MAKEFILE_DIR)Ponies
-SCRIPT=$(MAKEFILE_DIR)render_parts.php
+SCRIPT_INTERPRETER=$(MAKEFILE_DIR)patsi/.env/bin/python
+SCRIPT=$(MAKEFILE_DIR)patsi/patsi-render.py
 OUT_DIR=$(MAKEFILE_DIR)rendered
 PONIES=$(notdir $(shell find $(PONY_DIR) -maxdepth 1 -mindepth 1 -type d ))
-OUT_PLAIN=$(addprefix $(PONY_DIR)/,$(addsuffix .txt,$(PONIES)))
-OUT_COLOR=$(addprefix $(OUT_DIR)/ansi/,$(addsuffix .colored.txt,$(PONIES)))
-OUT_COLOR_IRC=$(addprefix $(OUT_DIR)/irc/,$(addsuffix .irc.txt,$(PONIES)))
-OUT_SVG=$(addprefix $(OUT_DIR)/svg/,$(addsuffix .svg,$(PONIES)))
-OUT_PNG=$(addprefix $(OUT_DIR)/png/,$(addsuffix .png,$(PONIES)))
-OUT_BASH=$(addprefix $(OUT_DIR)/sh/,$(addsuffix .sh,$(PONIES)))
-OUT_ALL= $(OUT_COLOR) $(OUT_PLAIN) $(OUT_SVG) $(OUT_PNG) $(OUT_BASH) $(OUT_COLOR_IRC)
+OUT_ALL=$(foreach pony,$(PONIES),$(foreach format,$(FORMATS),$(OUT_DIR)/$(format)/$(pony).$(format)))
 OUT_DIRS=$(sort $(dir $(OUT_ALL)))
 find_deps=$(subst ;,\\\;,$(wildcard $(PONY_DIR)/$(1)/*))
+FORMATS=txt ansi svg sh irc png
 
 INSTALL_DIR=cp -rf
 INSTALL_FILE=cp -f
@@ -32,55 +28,25 @@ MAKE_DIR=mkdir -p
 
 all: $(OUT_ALL)
 
+define rule_single_output
+$(OUT_DIR)/$(2)/$(1).$(2): | $(dir $(OUT_DIR)/$(2)/$(1))
+$(OUT_DIR)/$(2)/$(1).$(2): $(call find_deps, $(1))
+$(OUT_DIR)/$(2)/$(1).$(2): $(PONY_DIR)/$(1)
+$(OUT_DIR)/$(2)/$(1).$(2): $(SCRIPT_INTERPRETER)
+	$(SCRIPT_INTERPRETER) $(SCRIPT) -i $(PONY_DIR)/$(1) -o $(OUT_DIR)/$(2)/$(1).$(2)
+endef
+
 define rule_template
-$(OUT_DIR)/ansi/$(1).colored.txt: | $(dir $(OUT_DIR)/ansi/$(1))
-$(OUT_DIR)/ansi/$(1).colored.txt: $(call find_deps, $(1))
-$(OUT_DIR)/ansi/$(1).colored.txt:  $(PONY_DIR)/$(1)
-	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/ansi/$(1).colored.txt
 
-$(PONY_DIR)/$(1).txt: $(call find_deps, $(1))
-$(PONY_DIR)/$(1).txt:  $(PONY_DIR)/$(1)
-	$(SCRIPT) $(PONY_DIR)/$(1) >$(PONY_DIR)/$(1).txt nocolor
-	
-$(OUT_DIR)/svg/$(1).svg: | $(dir $(OUT_DIR)/svg/$(1))
-$(OUT_DIR)/svg/$(1).svg: $(call find_deps, $(1))
-$(OUT_DIR)/svg/$(1).svg:  $(PONY_DIR)/$(1)
-	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/svg/$(1).svg svg
-	
-$(OUT_DIR)/sh/$(1).sh: | $(dir $(OUT_DIR)/sh/$(1))
-$(OUT_DIR)/sh/$(1).sh: $(call find_deps, $(1))
-$(OUT_DIR)/sh/$(1).sh:  $(PONY_DIR)/$(1)
-	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/sh/$(1).sh bash
-	chmod a+x $(OUT_DIR)/sh/$(1).sh
-	
-	
-$(OUT_DIR)/irc/$(1).irc.txt: | $(dir $(OUT_DIR)/irc/$(1))
-$(OUT_DIR)/irc/$(1).irc.txt: $(call find_deps, $(1))
-$(OUT_DIR)/irc/$(1).irc.txt:  $(PONY_DIR)/$(1)
-	$(SCRIPT) $(PONY_DIR)/$(1) >$(OUT_DIR)/irc/$(1).irc.txt irc
-
-$(OUT_DIR)/png/$(1).png :  $(dir $(OUT_DIR)/png/$(1))
-$(OUT_DIR)/png/$(1).png : $(OUT_DIR)/svg/$(1).svg
-	inkscape $(OUT_DIR)/svg/$(1).svg -e $(OUT_DIR)/png/$(1).png
+$(foreach format,$(FORMATS),$(eval $(call rule_single_output,$(1),$(format))))
 
 .PHONY: $(1)
-$(1) : $(OUT_DIR)/ansi/$(1).colored.txt
-$(1) : $(PONY_DIR)/$(1).txt
-$(1) : $(OUT_DIR)/svg/$(1).svg
-$(1) : $(OUT_DIR)/sh/$(1).sh
-$(1) : $(OUT_DIR)/irc/$(1).irc.txt
-$(1) : $(OUT_DIR)/png/$(1).png
-	@cat $(OUT_DIR)/ansi/$(1).colored.txt
+$(1) : $(foreach format,$(FORMATS),$(OUT_DIR)/$(format)/$(1).$(format))
+	@cat $(OUT_DIR)/ansi/$(1).ansi
 
 .PHONY: clean_$(1)
 clean_$(1):
-	$(REMOVE_FILE) $(OUT_DIR)/ansi/$(1).colored.txt
-	$(REMOVE_FILE) $(PONY_DIR)/$(1).txt
-	$(REMOVE_FILE) $(OUT_DIR)/svg/$(1).svg
-	$(REMOVE_FILE) $(OUT_DIR)/sh/$(1).sh
-	$(REMOVE_FILE) $(OUT_DIR)/irc/$(1).irc.txt
-	$(REMOVE_FILE) $(OUT_DIR)/png/$(1).png
-
+	$(REMOVE_FILE) $(foreach format,$(FORMATS),$(OUT_DIR)/$(format)/$(1).$(format))
 
 endef
 define dir_rule_template
@@ -91,8 +57,8 @@ endef
 $(foreach pony,$(PONIES),$(eval $(call rule_template,$(pony))))
 $(foreach directory,$(OUT_DIRS),$(eval $(call dir_rule_template,$(directory))))
 
-show: $(OUT_DIR)/ansi/$(PONY).colored.txt
-	@cat $(OUT_DIR)/ansi/$(PONY).colored.txt
+show: $(OUT_DIR)/ansi/$(PONY).ansi
+	@cat $(OUT_DIR)/ansi/$(PONY).ansi
 	
 show_deps:
 	@$(foreach d,$(call find_deps,$(PONY)), echo $(d);)
@@ -130,3 +96,7 @@ touchput:
 	find $(PONY_DIR) -name '*.txt' -exec touch {} \;
 	find $(OUT_DIR) -exec touch {} \;
 	find $(OUT_DIR) -name '*.png' -exec touch {} \;
+
+$(SCRIPT_INTERPRETER): $(MAKEFILE_DIR)patsi/setup-env.sh
+$(SCRIPT_INTERPRETER): $(MAKEFILE_DIR)patsi/requirements.pip
+	$(MAKEFILE_DIR)patsi/setup-env.sh

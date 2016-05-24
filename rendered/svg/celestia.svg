@@ -1,769 +1,274 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' width='480' height='396'>
-<rect style='fill:black;stroke:none;' width='480' height='396' x='0' y='0' />
-<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:bold;'>
-<tspan x='276' y='24' style='fill:white;'>,</tspan>
-<tspan x='282' y='24' style='fill:white;'>'</tspan>
-<tspan x='288' y='24' style='fill:white;'>/</tspan>
-
-<tspan x='270' y='36' style='fill:white;'>.</tspan>
-<tspan x='282' y='36' style='fill:white;'>/</tspan>
-<tspan x='294' y='36' style='fill:cyan;'>_</tspan>
-<tspan x='300' y='36' style='fill:cyan;'>_</tspan>
-<tspan x='306' y='36' style='fill:cyan;'>_</tspan>
-
-<tspan x='216' y='48' style='fill:cyan;'>_</tspan>
-<tspan x='222' y='48' style='fill:cyan;'>_</tspan>
-<tspan x='228' y='48' style='fill:cyan;'>_</tspan>
-<tspan x='234' y='48' style='fill:yellow;'>/</tspan>
-<tspan x='240' y='48' style='fill:yellow;'>\</tspan>
-<tspan x='264' y='48' style='fill:white;'>/</tspan>
-<tspan x='276' y='48' style='fill:white;'>/</tspan>
-<tspan x='282' y='48' style='fill:cyan;'>'</tspan>
-<tspan x='288' y='48' style='fill:cyan;'>`</tspan>
-<tspan x='294' y='48' style='fill:lime;'>_</tspan>
-<tspan x='312' y='48' style='fill:cyan;'>`</tspan>
-<tspan x='318' y='48' style='fill:cyan;'>'</tspan>
-<tspan x='324' y='48' style='fill:cyan;'>.</tspan>
-
-<tspan x='138' y='60' style='fill:white;'>_</tspan>
-<tspan x='144' y='60' style='fill:white;'>_</tspan>
-<tspan x='162' y='60' style='fill:silver;'>_</tspan>
-<tspan x='198' y='60' style='fill:cyan;'>.</tspan>
-<tspan x='204' y='60' style='fill:cyan;'>-</tspan>
-<tspan x='210' y='60' style='fill:cyan;'>'</tspan>
-<tspan x='222' y='60' style='fill:yellow;'>:</tspan>
-<tspan x='228' y='60' style='fill:yellow;'>v</tspan>
-<tspan x='246' y='60' style='fill:yellow;'>:</tspan>
-<tspan x='252' y='60' style='fill:cyan;'>u</tspan>
-<tspan x='258' y='60' style='fill:white;'>/</tspan>
-<tspan x='270' y='60' style='fill:white;'>/</tspan>
-<tspan x='276' y='60' style='fill:lime;'>-</tspan>
-<tspan x='282' y='60' style='fill:lime;'>'</tspan>
-<tspan x='288' y='60' style='fill:lime;'>`</tspan>
-<tspan x='300' y='60' style='fill:lime;'>\</tspan>
-<tspan x='324' y='60' style='fill:cyan;'>)</tspan>
-
-<tspan x='108' y='72' style='fill:white;'>.</tspan>
-<tspan x='114' y='72' style='fill:white;'>-</tspan>
-<tspan x='120' y='72' style='fill:white;'>'</tspan>
-<tspan x='126' y='72' style='fill:white;'>`</tspan>
-<tspan x='132' y='72' style='fill:white;'>`</tspan>
-<tspan x='150' y='72' style='fill:white;'>\</tspan>
-<tspan x='156' y='72' style='fill:silver;'>`</tspan>
-<tspan x='168' y='72' style='fill:silver;'>\</tspan>
-<tspan x='186' y='72' style='fill:cyan;'>.</tspan>
-<tspan x='192' y='72' style='fill:cyan;'>'</tspan>
-<tspan x='198' y='72' style='fill:white;'>.</tspan>
-<tspan x='204' y='72' style='fill:white;'>'</tspan>
-<tspan x='210' y='72' style='fill:white;'>)</tspan>
-<tspan x='222' y='72' style='fill:yellow;'>)</tspan>
-<tspan x='234' y='72' style='fill:purple;'>/</tspan>
-<tspan x='240' y='72' style='fill:purple;'>\</tspan>
-<tspan x='252' y='72' style='fill:white;'>/</tspan>
-<tspan x='264' y='72' style='fill:white;'>/</tspan>
-<tspan x='306' y='72' style='fill:lime;'>:</tspan>
-<tspan x='324' y='72' style='fill:cyan;'>|</tspan>
-
-<tspan x='90' y='84' style='fill:white;'>.</tspan>
-<tspan x='96' y='84' style='fill:white;'>'</tspan>
-<tspan x='102' y='84' style='fill:white;'>`</tspan>
-<tspan x='120' y='84' style='fill:silver;'>.</tspan>
-<tspan x='126' y='84' style='fill:silver;'>-</tspan>
-<tspan x='132' y='84' style='fill:silver;'>-</tspan>
-<tspan x='138' y='84' style='fill:silver;'>.</tspan>
-<tspan x='156' y='84' style='fill:white;'>)</tspan>
-<tspan x='168' y='84' style='fill:silver;'>.</tspan>
-<tspan x='174' y='84' style='fill:silver;'>)</tspan>
-<tspan x='180' y='84' style='fill:cyan;'>/</tspan>
-<tspan x='192' y='84' style='fill:white;'>/</tspan>
-<tspan x='204' y='84' style='fill:white;'>/</tspan>
-<tspan x='210' y='84' style='fill:yellow;'>-</tspan>
-<tspan x='216' y='84' style='fill:yellow;'>'</tspan>
-<tspan x='222' y='84' style='fill:yellow;'>_</tspan>
-<tspan x='228' y='84' style='fill:yellow;'>_</tspan>
-<tspan x='234' y='84' style='fill:purple;'>\</tspan>
-<tspan x='240' y='84' style='fill:purple;'>/</tspan>
-<tspan x='246' y='84' style='fill:white;'>/</tspan>
-<tspan x='258' y='84' style='fill:white;'>/</tspan>
-<tspan x='306' y='84' style='fill:lime;'>|</tspan>
-<tspan x='324' y='84' style='fill:cyan;'>|</tspan>
-
-<tspan x='72' y='96' style='fill:white;'>.</tspan>
-<tspan x='78' y='96' style='fill:white;'>'</tspan>
-<tspan x='84' y='96' style='fill:white;'>`</tspan>
-<tspan x='96' y='96' style='fill:silver;'>.</tspan>
-<tspan x='102' y='96' style='fill:silver;'>-</tspan>
-<tspan x='108' y='96' style='fill:silver;'>'</tspan>
-<tspan x='114' y='96' style='fill:silver;'>`</tspan>
-<tspan x='132' y='96' style='fill:silver;'>.</tspan>
-<tspan x='138' y='96' style='fill:silver;'>|</tspan>
-<tspan x='150' y='96' style='fill:white;'>.</tspan>
-<tspan x='156' y='96' style='fill:white;'>'</tspan>
-<tspan x='162' y='96' style='fill:silver;'>.</tspan>
-<tspan x='168' y='96' style='fill:silver;'>|</tspan>
-<tspan x='174' y='96' style='fill:cyan;'>:</tspan>
-<tspan x='186' y='96' style='fill:yellow;'>@</tspan>
-<tspan x='192' y='96' style='fill:yellow;'>_</tspan>
-<tspan x='198' y='96' style='fill:yellow;'>-</tspan>
-<tspan x='204' y='96' style='fill:yellow;'>'</tspan>
-<tspan x='210' y='96' style='fill:yellow;'>`</tspan>
-<tspan x='216' y='96' style='fill:yellow;'>`</tspan>
-<tspan x='228' y='96' style='fill:lime;'>\</tspan>
-<tspan x='246' y='96' style='fill:lime;'>\</tspan>
-<tspan x='252' y='96' style='fill:white;'>/</tspan>
-<tspan x='258' y='96' style='fill:lime;'>\</tspan>
-<tspan x='264' y='96' style='fill:blue;'>.</tspan>
-<tspan x='270' y='96' style='fill:blue;'>.</tspan>
-<tspan x='276' y='96' style='fill:blue;'>-</tspan>
-<tspan x='282' y='96' style='fill:blue;'>-</tspan>
-<tspan x='288' y='96' style='fill:blue;'>.</tspan>
-<tspan x='306' y='96' style='fill:lime;'>|</tspan>
-<tspan x='324' y='96' style='fill:cyan;'>(</tspan>
-<tspan x='348' y='96' style='fill:cyan;'>_</tspan>
-<tspan x='354' y='96' style='fill:cyan;'>.</tspan>
-<tspan x='360' y='96' style='fill:cyan;'>-</tspan>
-<tspan x='366' y='96' style='fill:cyan;'>.</tspan>
-<tspan x='372' y='96' style='fill:lime;'>_</tspan>
-
-<tspan x='60' y='108' style='fill:white;'>,</tspan>
-<tspan x='66' y='108' style='fill:white;'>'</tspan>
-<tspan x='78' y='108' style='fill:silver;'>.</tspan>
-<tspan x='84' y='108' style='fill:silver;'>'</tspan>
-<tspan x='90' y='108' style='fill:silver;'>`</tspan>
-<tspan x='132' y='108' style='fill:silver;'>|</tspan>
-<tspan x='138' y='108' style='fill:silver;'>'</tspan>
-<tspan x='150' y='108' style='fill:white;'>|</tspan>
-<tspan x='162' y='108' style='fill:silver;'>|</tspan>
-<tspan x='168' y='108' style='fill:silver;'>'</tspan>
-<tspan x='174' y='108' style='fill:cyan;'>|</tspan>
-<tspan x='186' y='108' style='fill:cyan;'>(</tspan>
-<tspan x='198' y='108' style='fill:cyan;'>/</tspan>
-<tspan x='204' y='108' style='fill:cyan;'>.</tspan>
-<tspan x='234' y='108' style='fill:lime;'>'</tspan>
-<tspan x='240' y='108' style='fill:lime;'>-</tspan>
-<tspan x='246' y='108' style='fill:lime;'>.</tspan>
-<tspan x='252' y='108' style='fill:lime;'>_</tspan>
-<tspan x='258' y='108' style='fill:lime;'>_</tspan>
-<tspan x='264' y='108' style='fill:lime;'>\</tspan>
-<tspan x='294' y='108' style='fill:blue;'>)</tspan>
-<tspan x='306' y='108' style='fill:lime;'>(</tspan>
-<tspan x='330' y='108' style='fill:cyan;'>`</tspan>
-<tspan x='336' y='108' style='fill:cyan;'>'</tspan>
-<tspan x='342' y='108' style='fill:cyan;'>'</tspan>
-<tspan x='348' y='108' style='fill:lime;'>.</tspan>
-<tspan x='354' y='108' style='fill:lime;'>-</tspan>
-<tspan x='360' y='108' style='fill:lime;'>'</tspan>
-<tspan x='366' y='108' style='fill:lime;'>`</tspan>
-<tspan x='378' y='108' style='fill:lime;'>`</tspan>
-<tspan x='384' y='108' style='fill:lime;'>.</tspan>
-
-<tspan x='48' y='120' style='fill:white;'>.</tspan>
-<tspan x='54' y='120' style='fill:white;'>'</tspan>
-<tspan x='60' y='120' style='fill:silver;'>.</tspan>
-<tspan x='66' y='120' style='fill:silver;'>-</tspan>
-<tspan x='72' y='120' style='fill:silver;'>`</tspan>
-<tspan x='132' y='120' style='fill:silver;'>|</tspan>
-<tspan x='144' y='120' style='fill:white;'>.</tspan>
-<tspan x='150' y='120' style='fill:white;'>|</tspan>
-<tspan x='162' y='120' style='fill:silver;'>|</tspan>
-<tspan x='174' y='120' style='fill:cyan;'>|</tspan>
-<tspan x='186' y='120' style='fill:cyan;'>\</tspan>
-<tspan x='204' y='120' style='fill:cyan;'>)</tspan>
-<tspan x='216' y='120' style='fill:gray;'>\</tspan>
-<tspan x='222' y='120' style='fill:gray;'>_</tspan>
-<tspan x='228' y='120' style='fill:gray;'>_</tspan>
-<tspan x='234' y='120' style='fill:gray;'>.</tspan>
-<tspan x='252' y='120' style='fill:white;'>|</tspan>
-<tspan x='294' y='120' style='fill:blue;'>|</tspan>
-<tspan x='312' y='120' style='fill:lime;'>`</tspan>
-<tspan x='318' y='120' style='fill:lime;'>-</tspan>
-<tspan x='324' y='120' style='fill:lime;'>-</tspan>
-<tspan x='330' y='120' style='fill:lime;'>-</tspan>
-<tspan x='336' y='120' style='fill:lime;'>`</tspan>
-<tspan x='342' y='120' style='fill:lime;'>`</tspan>
-<tspan x='384' y='120' style='fill:lime;'>)</tspan>
-
-<tspan x='36' y='132' style='fill:white;'>.</tspan>
-<tspan x='42' y='132' style='fill:white;'>'</tspan>
-<tspan x='54' y='132' style='fill:silver;'>(</tspan>
-<tspan x='60' y='132' style='fill:silver;'>_</tspan>
-<tspan x='66' y='132' style='fill:silver;'>.</tspan>
-<tspan x='72' y='132' style='fill:silver;'>'</tspan>
-<tspan x='132' y='132' style='fill:silver;'>|</tspan>
-<tspan x='144' y='132' style='fill:white;'>|</tspan>
-<tspan x='150' y='132' style='fill:white;'>'</tspan>
-<tspan x='156' y='132' style='fill:silver;'>.</tspan>
-<tspan x='162' y='132' style='fill:silver;'>|</tspan>
-<tspan x='174' y='132' style='fill:cyan;'>|</tspan>
-<tspan x='186' y='132' style='fill:white;'>(</tspan>
-<tspan x='192' y='132' style='fill:cyan;'>'</tspan>
-<tspan x='198' y='132' style='fill:cyan;'>`</tspan>
-<tspan x='210' y='132' style='fill:white;'>,</tspan>
-<tspan x='216' y='132' style='fill:white;'>_</tspan>
-<tspan x='252' y='132' style='fill:white;'>`</tspan>
-<tspan x='258' y='132' style='fill:white;'>.</tspan>
-<tspan x='294' y='132' style='fill:blue;'>:</tspan>
-<tspan x='342' y='132' style='fill:blue;'>.</tspan>
-<tspan x='348' y='132' style='fill:blue;'>-</tspan>
-<tspan x='354' y='132' style='fill:blue;'>-</tspan>
-<tspan x='360' y='132' style='fill:blue;'>.</tspan>
-<tspan x='384' y='132' style='fill:lime;'>/</tspan>
-
-<tspan x='24' y='144' style='fill:white;'>.</tspan>
-<tspan x='30' y='144' style='fill:white;'>'</tspan>
-<tspan x='60' y='144' style='fill:silver;'>/</tspan>
-<tspan x='84' y='144' style='fill:silver;'>.</tspan>
-<tspan x='132' y='144' style='fill:silver;'>|</tspan>
-<tspan x='144' y='144' style='fill:white;'>|</tspan>
-<tspan x='156' y='144' style='fill:silver;'>|</tspan>
-<tspan x='162' y='144' style='fill:silver;'>'</tspan>
-<tspan x='174' y='144' style='fill:cyan;'>(</tspan>
-<tspan x='192' y='144' style='fill:white;'>\</tspan>
-<tspan x='222' y='144' style='fill:white;'>`</tspan>
-<tspan x='228' y='144' style='fill:white;'>\</tspan>
-<tspan x='234' y='144' style='fill:white;'>-</tspan>
-<tspan x='240' y='144' style='fill:white;'>.</tspan>
-<tspan x='246' y='144' style='fill:white;'>-</tspan>
-<tspan x='252' y='144' style='fill:white;'>'</tspan>
-<tspan x='300' y='144' style='fill:blue;'>\</tspan>
-<tspan x='318' y='144' style='fill:blue;'>.</tspan>
-<tspan x='324' y='144' style='fill:blue;'>-</tspan>
-<tspan x='330' y='144' style='fill:blue;'>'</tspan>
-<tspan x='336' y='144' style='fill:blue;'>`</tspan>
-<tspan x='366' y='144' style='fill:blue;'>|</tspan>
-<tspan x='384' y='144' style='fill:lime;'>\</tspan>
-
-<tspan x='18' y='156' style='fill:white;'>-</tspan>
-<tspan x='36' y='156' style='fill:white;'>.</tspan>
-<tspan x='54' y='156' style='fill:silver;'>(</tspan>
-<tspan x='60' y='156' style='fill:silver;'>_</tspan>
-<tspan x='66' y='156' style='fill:silver;'>.</tspan>
-<tspan x='72' y='156' style='fill:silver;'>-</tspan>
-<tspan x='78' y='156' style='fill:silver;'>'</tspan>
-<tspan x='132' y='156' style='fill:silver;'>|</tspan>
-<tspan x='144' y='156' style='fill:white;'>|</tspan>
-<tspan x='156' y='156' style='fill:silver;'>|</tspan>
-<tspan x='180' y='156' style='fill:cyan;'>\</tspan>
-<tspan x='192' y='156' style='fill:yellow;'>|</tspan>
-<tspan x='198' y='156' style='fill:yellow;'>\</tspan>
-<tspan x='234' y='156' style='fill:white;'>\</tspan>
-<tspan x='264' y='156' style='fill:magenta;'>_</tspan>
-<tspan x='270' y='156' style='fill:magenta;'>_</tspan>
-<tspan x='306' y='156' style='fill:blue;'>`</tspan>
-<tspan x='312' y='156' style='fill:blue;'>`</tspan>
-<tspan x='366' y='156' style='fill:blue;'>|</tspan>
-<tspan x='390' y='156' style='fill:lime;'>`</tspan>
-<tspan x='396' y='156' style='fill:lime;'>'</tspan>
-<tspan x='402' y='156' style='fill:lime;'>'</tspan>
-<tspan x='408' y='156' style='fill:lime;'>-</tspan>
-<tspan x='414' y='156' style='fill:lime;'>-</tspan>
-<tspan x='420' y='156' style='fill:lime;'>.</tspan>
-<tspan x='426' y='156' style='fill:lime;'>,</tspan>
-
-<tspan x='6' y='168' style='fill:white;'>.</tspan>
-<tspan x='12' y='168' style='fill:white;'>`</tspan>
-<tspan x='24' y='168' style='fill:white;'>.</tspan>
-<tspan x='30' y='168' style='fill:white;'>'</tspan>
-<tspan x='48' y='168' style='fill:white;'>.</tspan>
-<tspan x='72' y='168' style='fill:silver;'>/</tspan>
-<tspan x='90' y='168' style='fill:silver;'>/</tspan>
-<tspan x='132' y='168' style='fill:silver;'>|</tspan>
-<tspan x='144' y='168' style='fill:white;'>|</tspan>
-<tspan x='156' y='168' style='fill:silver;'>:</tspan>
-<tspan x='186' y='168' style='fill:cyan;'>\</tspan>
-<tspan x='192' y='168' style='fill:yellow;'>|</tspan>
-<tspan x='204' y='168' style='fill:yellow;'>`</tspan>
-<tspan x='210' y='168' style='fill:yellow;'>-</tspan>
-<tspan x='216' y='168' style='fill:yellow;'>.</tspan>
-<tspan x='222' y='168' style='fill:yellow;'>_</tspan>
-<tspan x='240' y='168' style='fill:white;'>\</tspan>
-<tspan x='246' y='168' style='fill:magenta;'>.</tspan>
-<tspan x='252' y='168' style='fill:magenta;'>'</tspan>
-<tspan x='258' y='168' style='fill:magenta;'>`</tspan>
-<tspan x='276' y='168' style='fill:magenta;'>'</tspan>
-<tspan x='282' y='168' style='fill:magenta;'>.</tspan>
-<tspan x='330' y='168' style='fill:magenta;'>.</tspan>
-<tspan x='336' y='168' style='fill:magenta;'>-</tspan>
-<tspan x='342' y='168' style='fill:magenta;'>-</tspan>
-<tspan x='348' y='168' style='fill:magenta;'>.</tspan>
-<tspan x='366' y='168' style='fill:blue;'>`</tspan>
-<tspan x='372' y='168' style='fill:blue;'>-</tspan>
-<tspan x='378' y='168' style='fill:blue;'>.</tspan>
-<tspan x='384' y='168' style='fill:blue;'>.</tspan>
-<tspan x='390' y='168' style='fill:blue;'>-</tspan>
-<tspan x='396' y='168' style='fill:blue;'>'</tspan>
-<tspan x='402' y='168' style='fill:blue;'>`</tspan>
-<tspan x='408' y='168' style='fill:blue;'>`</tspan>
-<tspan x='414' y='168' style='fill:blue;'>'</tspan>
-<tspan x='420' y='168' style='fill:blue;'>.</tspan>
-<tspan x='432' y='168' style='fill:lime;'>)</tspan>
-
-<tspan x='6' y='180' style='fill:white;'>'</tspan>
-<tspan x='12' y='180' style='fill:white;'>-</tspan>
-<tspan x='18' y='180' style='fill:white;'>'</tspan>
-<tspan x='24' y='180' style='fill:white;'>/</tspan>
-<tspan x='42' y='180' style='fill:white;'>/</tspan>
-<tspan x='66' y='180' style='fill:silver;'>(</tspan>
-<tspan x='84' y='180' style='fill:silver;'>/</tspan>
-<tspan x='132' y='180' style='fill:silver;'>|</tspan>
-<tspan x='144' y='180' style='fill:white;'>:</tspan>
-<tspan x='156' y='180' style='fill:silver;'>(</tspan>
-<tspan x='192' y='180' style='fill:white;'>|</tspan>
-<tspan x='198' y='180' style='fill:yellow;'>'</tspan>
-<tspan x='204' y='180' style='fill:yellow;'>-</tspan>
-<tspan x='210' y='180' style='fill:yellow;'>,</tspan>
-<tspan x='228' y='180' style='fill:yellow;'>`</tspan>
-<tspan x='234' y='180' style='fill:yellow;'>-</tspan>
-<tspan x='240' y='180' style='fill:yellow;'>.</tspan>
-<tspan x='246' y='180' style='fill:yellow;'>)</tspan>
-<tspan x='252' y='180' style='fill:yellow;'>\</tspan>
-<tspan x='288' y='180' style='fill:magenta;'>\</tspan>
-<tspan x='318' y='180' style='fill:magenta;'>.</tspan>
-<tspan x='324' y='180' style='fill:magenta;'>'</tspan>
-<tspan x='354' y='180' style='fill:magenta;'>)</tspan>
-<tspan x='402' y='180' style='fill:magenta;'>_</tspan>
-<tspan x='408' y='180' style='fill:magenta;'>_</tspan>
-<tspan x='420' y='180' style='fill:blue;'>)</tspan>
-<tspan x='432' y='180' style='fill:lime;'>)</tspan>
-
-<tspan x='18' y='192' style='fill:white;'>/</tspan>
-<tspan x='36' y='192' style='fill:white;'>/</tspan>
-<tspan x='66' y='192' style='fill:white;'>/</tspan>
-<tspan x='72' y='192' style='fill:silver;'>`</tspan>
-<tspan x='78' y='192' style='fill:silver;'>`</tspan>
-<tspan x='84' y='192' style='fill:silver;'>(</tspan>
-<tspan x='102' y='192' style='fill:silver;'>.</tspan>
-<tspan x='108' y='192' style='fill:silver;'>'</tspan>
-<tspan x='132' y='192' style='fill:silver;'>(</tspan>
-<tspan x='144' y='192' style='fill:white;'>(</tspan>
-<tspan x='162' y='192' style='fill:silver;'>'</tspan>
-<tspan x='168' y='192' style='fill:silver;'>.</tspan>
-<tspan x='174' y='192' style='fill:silver;'>.</tspan>
-<tspan x='180' y='192' style='fill:silver;'>-</tspan>
-<tspan x='186' y='192' style='fill:silver;'>'</tspan>
-<tspan x='192' y='192' style='fill:white;'>:</tspan>
-<tspan x='198' y='192' style='fill:white;'>'</tspan>
-<tspan x='216' y='192' style='fill:yellow;'>`</tspan>
-<tspan x='222' y='192' style='fill:yellow;'>-</tspan>
-<tspan x='228' y='192' style='fill:yellow;'>,</tspan>
-<tspan x='246' y='192' style='fill:purple;'>A</tspan>
-<tspan x='258' y='192' style='fill:yellow;'>)</tspan>
-<tspan x='294' y='192' style='fill:magenta;'>\</tspan>
-<tspan x='300' y='192' style='fill:magenta;'>_</tspan>
-<tspan x='306' y='192' style='fill:magenta;'>.</tspan>
-<tspan x='312' y='192' style='fill:magenta;'>'</tspan>
-<tspan x='354' y='192' style='fill:magenta;'>(</tspan>
-<tspan x='360' y='192' style='fill:magenta;'>_</tspan>
-<tspan x='372' y='192' style='fill:magenta;'>.</tspan>
-<tspan x='378' y='192' style='fill:magenta;'>-</tspan>
-<tspan x='384' y='192' style='fill:magenta;'>-</tspan>
-<tspan x='390' y='192' style='fill:magenta;'>-</tspan>
-<tspan x='396' y='192' style='fill:magenta;'>:</tspan>
-<tspan x='414' y='192' style='fill:magenta;'>)</tspan>
-<tspan x='420' y='192' style='fill:blue;'>|</tspan>
-<tspan x='432' y='192' style='fill:lime;'>/</tspan>
-
-<tspan x='12' y='204' style='fill:white;'>/</tspan>
-<tspan x='30' y='204' style='fill:white;'>/</tspan>
-<tspan x='60' y='204' style='fill:white;'>/</tspan>
-<tspan x='90' y='204' style='fill:silver;'>'</tspan>
-<tspan x='96' y='204' style='fill:silver;'>`</tspan>
-<tspan x='102' y='204' style='fill:silver;'>'</tspan>
-<tspan x='120' y='204' style='fill:silver;'>.</tspan>
-<tspan x='138' y='204' style='fill:silver;'>\</tspan>
-<tspan x='150' y='204' style='fill:white;'>'</tspan>
-<tspan x='156' y='204' style='fill:white;'>-</tspan>
-<tspan x='162' y='204' style='fill:white;'>-</tspan>
-<tspan x='168' y='204' style='fill:white;'>-</tspan>
-<tspan x='174' y='204' style='fill:white;'>'</tspan>
-<tspan x='180' y='204' style='fill:white;'>'</tspan>
-<tspan x='186' y='204' style='fill:white;'>`</tspan>
-<tspan x='234' y='204' style='fill:yellow;'>\</tspan>
-<tspan x='246' y='204' style='fill:purple;'>V</tspan>
-<tspan x='258' y='204' style='fill:yellow;'>)</tspan>
-<tspan x='264' y='204' style='fill:magenta;'>`</tspan>
-<tspan x='270' y='204' style='fill:magenta;'>-</tspan>
-<tspan x='276' y='204' style='fill:magenta;'>.</tspan>
-<tspan x='354' y='204' style='fill:magenta;'>.</tspan>
-<tspan x='360' y='204' style='fill:magenta;'>-</tspan>
-<tspan x='366' y='204' style='fill:magenta;'>`</tspan>
-<tspan x='402' y='204' style='fill:magenta;'>'</tspan>
-<tspan x='408' y='204' style='fill:magenta;'>.</tspan>
-<tspan x='414' y='204' style='fill:magenta;'>(</tspan>
-<tspan x='420' y='204' style='fill:blue;'>(</tspan>
-<tspan x='426' y='204' style='fill:lime;'>(</tspan>
-
-<tspan x='6' y='216' style='fill:white;'>'</tspan>
-<tspan x='24' y='216' style='fill:white;'>/</tspan>
-<tspan x='54' y='216' style='fill:white;'>/</tspan>
-<tspan x='84' y='216' style='fill:white;'>/</tspan>
-<tspan x='102' y='216' style='fill:silver;'>`</tspan>
-<tspan x='108' y='216' style='fill:silver;'>'</tspan>
-<tspan x='114' y='216' style='fill:silver;'>`</tspan>
-<tspan x='120' y='216' style='fill:silver;'>(</tspan>
-<tspan x='126' y='216' style='fill:silver;'>_</tspan>
-<tspan x='132' y='216' style='fill:silver;'>.</tspan>
-<tspan x='144' y='216' style='fill:silver;'>`</tspan>
-<tspan x='150' y='216' style='fill:silver;'>'</tspan>
-<tspan x='156' y='216' style='fill:silver;'>'</tspan>
-<tspan x='186' y='216' style='fill:white;'>.</tspan>
-<tspan x='192' y='216' style='fill:white;'>'</tspan>
-<tspan x='198' y='216' style='fill:white;'>`</tspan>
-<tspan x='240' y='216' style='fill:yellow;'>)</tspan>
-<tspan x='246' y='216' style='fill:yellow;'>-</tspan>
-<tspan x='252' y='216' style='fill:yellow;'>'</tspan>
-<tspan x='282' y='216' style='fill:magenta;'>`</tspan>
-<tspan x='288' y='216' style='fill:magenta;'>-</tspan>
-<tspan x='294' y='216' style='fill:magenta;'>.</tspan>
-<tspan x='300' y='216' style='fill:magenta;'>.</tspan>
-<tspan x='306' y='216' style='fill:magenta;'>_</tspan>
-<tspan x='312' y='216' style='fill:magenta;'>_</tspan>
-<tspan x='318' y='216' style='fill:magenta;'>_</tspan>
-<tspan x='324' y='216' style='fill:magenta;'>.</tspan>
-<tspan x='330' y='216' style='fill:magenta;'>.</tspan>
-<tspan x='336' y='216' style='fill:magenta;'>-</tspan>
-<tspan x='342' y='216' style='fill:magenta;'>'</tspan>
-<tspan x='348' y='216' style='fill:magenta;'>`</tspan>
-<tspan x='414' y='216' style='fill:magenta;'>\</tspan>
-<tspan x='426' y='216' style='fill:blue;'>`</tspan>
-<tspan x='432' y='216' style='fill:lime;'>`</tspan>
-<tspan x='438' y='216' style='fill:magenta;'>.</tspan>
-<tspan x='444' y='216' style='fill:magenta;'>'</tspan>
-
-<tspan x='0' y='228' style='fill:white;'>(</tspan>
-<tspan x='18' y='228' style='fill:white;'>/</tspan>
-<tspan x='48' y='228' style='fill:white;'>/</tspan>
-<tspan x='78' y='228' style='fill:white;'>/</tspan>
-<tspan x='102' y='228' style='fill:white;'>/</tspan>
-<tspan x='120' y='228' style='fill:white;'>/</tspan>
-<tspan x='138' y='228' style='fill:white;'>/</tspan>
-<tspan x='150' y='228' style='fill:white;'>/</tspan>
-<tspan x='162' y='228' style='fill:white;'>,</tspan>
-<tspan x='168' y='228' style='fill:white;'>'</tspan>
-<tspan x='174' y='228' style='fill:white;'>-</tspan>
-<tspan x='180' y='228' style='fill:white;'>`</tspan>
-<tspan x='222' y='228' style='fill:white;'>|</tspan>
-<tspan x='240' y='228' style='fill:white;'>|</tspan>
-<tspan x='252' y='228' style='fill:white;'>\</tspan>
-<tspan x='420' y='228' style='fill:magenta;'>'</tspan>
-<tspan x='426' y='228' style='fill:magenta;'>'</tspan>
-<tspan x='432' y='228' style='fill:magenta;'>`</tspan>
-
-<tspan x='6' y='240' style='fill:white;'>'</tspan>
-<tspan x='12' y='240' style='fill:white;'>`</tspan>
-<tspan x='18' y='240' style='fill:white;'>/</tspan>
-<tspan x='42' y='240' style='fill:white;'>/</tspan>
-<tspan x='72' y='240' style='fill:white;'>/</tspan>
-<tspan x='96' y='240' style='fill:white;'>/</tspan>
-<tspan x='114' y='240' style='fill:white;'>/</tspan>
-<tspan x='132' y='240' style='fill:white;'>/</tspan>
-<tspan x='138' y='240' style='fill:white;'>.</tspan>
-<tspan x='144' y='240' style='fill:white;'>'</tspan>
-<tspan x='150' y='240' style='fill:white;'>'</tspan>
-<tspan x='156' y='240' style='fill:white;'>`</tspan>
-<tspan x='162' y='240' style='fill:white;'>.</tspan>
-<tspan x='168' y='240' style='fill:white;'>'</tspan>
-<tspan x='222' y='240' style='fill:white;'>|</tspan>
-<tspan x='240' y='240' style='fill:white;'>:</tspan>
-<tspan x='258' y='240' style='fill:white;'>\</tspan>
-
-<tspan x='12' y='252' style='fill:white;'>/</tspan>
-<tspan x='36' y='252' style='fill:white;'>/</tspan>
-<tspan x='66' y='252' style='fill:white;'>/</tspan>
-<tspan x='90' y='252' style='fill:white;'>/</tspan>
-<tspan x='108' y='252' style='fill:white;'>/</tspan>
-<tspan x='114' y='252' style='fill:white;'>`</tspan>
-<tspan x='120' y='252' style='fill:white;'>-</tspan>
-<tspan x='126' y='252' style='fill:white;'>'</tspan>
-<tspan x='156' y='252' style='fill:white;'>/</tspan>
-<tspan x='174' y='252' style='fill:white;'>.</tspan>
-<tspan x='180' y='252' style='fill:white;'>.</tspan>
-<tspan x='186' y='252' style='fill:white;'>-</tspan>
-<tspan x='192' y='252' style='fill:white;'>-</tspan>
-<tspan x='198' y='252' style='fill:white;'>-</tspan>
-<tspan x='204' y='252' style='fill:white;'>.</tspan>
-<tspan x='222' y='252' style='fill:white;'>|</tspan>
-<tspan x='240' y='252' style='fill:white;'>'</tspan>
-<tspan x='246' y='252' style='fill:white;'>.</tspan>
-<tspan x='264' y='252' style='fill:white;'>\</tspan>
-
-<tspan x='6' y='264' style='fill:white;'>(</tspan>
-<tspan x='30' y='264' style='fill:white;'>/</tspan>
-<tspan x='36' y='264' style='fill:white;'>/</tspan>
-<tspan x='60' y='264' style='fill:white;'>/</tspan>
-<tspan x='84' y='264' style='fill:white;'>/</tspan>
-<tspan x='90' y='264' style='fill:white;'>(</tspan>
-<tspan x='96' y='264' style='fill:white;'>_</tspan>
-<tspan x='102' y='264' style='fill:white;'>/</tspan>
-<tspan x='138' y='264' style='fill:lime;'>_</tspan>
-<tspan x='150' y='264' style='fill:white;'>/</tspan>
-<tspan x='156' y='264' style='fill:orange;'>.</tspan>
-<tspan x='168' y='264' style='fill:orange;'>.</tspan>
-<tspan x='180' y='264' style='fill:orange;'>,</tspan>
-<tspan x='210' y='264' style='fill:white;'>)</tspan>
-<tspan x='216' y='264' style='fill:white;'>/</tspan>
-<tspan x='222' y='264' style='fill:white;'>|</tspan>
-<tspan x='228' y='264' style='fill:white;'>.</tspan>
-<tspan x='246' y='264' style='fill:white;'>'</tspan>
-<tspan x='252' y='264' style='fill:white;'>.</tspan>
-<tspan x='270' y='264' style='fill:white;'>\</tspan>
-
-<tspan x='12' y='276' style='fill:white;'>`</tspan>
-<tspan x='18' y='276' style='fill:white;'>-</tspan>
-<tspan x='24' y='276' style='fill:white;'>'</tspan>
-<tspan x='30' y='276' style='fill:white;'>(</tspan>
-<tspan x='54' y='276' style='fill:white;'>/</tspan>
-<tspan x='78' y='276' style='fill:white;'>/</tspan>
-<tspan x='114' y='276' style='fill:lime;'>.</tspan>
-<tspan x='120' y='276' style='fill:lime;'>-</tspan>
-<tspan x='126' y='276' style='fill:lime;'>'</tspan>
-<tspan x='132' y='276' style='fill:lime;'>`</tspan>
-<tspan x='144' y='276' style='fill:cyan;'>(</tspan>
-<tspan x='156' y='276' style='fill:orange;'>-</tspan>
-<tspan x='162' y='276' style='fill:yellow;'>(</tspan>
-<tspan x='168' y='276' style='fill:yellow;'>_</tspan>
-<tspan x='174' y='276' style='fill:yellow;'>)</tspan>
-<tspan x='180' y='276' style='fill:orange;'>-</tspan>
-<tspan x='204' y='276' style='fill:white;'>/</tspan>
-<tspan x='222' y='276' style='fill:white;'>'</tspan>
-<tspan x='228' y='276' style='fill:white;'>|</tspan>
-<tspan x='252' y='276' style='fill:white;'>'</tspan>
-<tspan x='258' y='276' style='fill:white;'>.</tspan>
-<tspan x='270' y='276' style='fill:yellow;'>(</tspan>
-<tspan x='276' y='276' style='fill:yellow;'>\</tspan>
-
-<tspan x='36' y='288' style='fill:white;'>`</tspan>
-<tspan x='42' y='288' style='fill:white;'>-</tspan>
-<tspan x='48' y='288' style='fill:white;'>'</tspan>
-<tspan x='54' y='288' style='fill:white;'>`</tspan>
-<tspan x='60' y='288' style='fill:white;'>-</tspan>
-<tspan x='66' y='288' style='fill:white;'>-</tspan>
-<tspan x='72' y='288' style='fill:white;'>'</tspan>
-<tspan x='102' y='288' style='fill:lime;'>/</tspan>
-<tspan x='108' y='288' style='fill:lime;'>`</tspan>
-<tspan x='150' y='288' style='fill:cyan;'>\</tspan>
-<tspan x='156' y='288' style='fill:orange;'>'</tspan>
-<tspan x='168' y='288' style='fill:orange;'>'</tspan>
-<tspan x='180' y='288' style='fill:orange;'>`</tspan>
-<tspan x='192' y='288' style='fill:white;'>.</tspan>
-<tspan x='198' y='288' style='fill:white;'>'</tspan>
-<tspan x='228' y='288' style='fill:white;'>|</tspan>
-<tspan x='234' y='288' style='fill:white;'>.</tspan>
-<tspan x='252' y='288' style='fill:yellow;'>(</tspan>
-<tspan x='258' y='288' style='fill:yellow;'>'</tspan>
-<tspan x='264' y='288' style='fill:yellow;'>.</tspan>
-<tspan x='270' y='288' style='fill:yellow;'>`</tspan>
-<tspan x='282' y='288' style='fill:yellow;'>\</tspan>
-<tspan x='300' y='288' style='fill:cyan;'>,</tspan>
-<tspan x='306' y='288' style='fill:cyan;'>.</tspan>
-<tspan x='312' y='288' style='fill:cyan;'>-</tspan>
-<tspan x='318' y='288' style='fill:cyan;'>-</tspan>
-<tspan x='324' y='288' style='fill:cyan;'>-</tspan>
-<tspan x='330' y='288' style='fill:cyan;'>.</tspan>
-
-<tspan x='96' y='300' style='fill:lime;'>(</tspan>
-<tspan x='102' y='300' style='fill:lime;'>_</tspan>
-<tspan x='156' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='162' y='300' style='fill:cyan;'>-</tspan>
-<tspan x='168' y='300' style='fill:cyan;'>-</tspan>
-<tspan x='174' y='300' style='fill:cyan;'>'</tspan>
-<tspan x='180' y='300' style='fill:cyan;'>'</tspan>
-<tspan x='186' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='192' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='198' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='204' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='210' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='216' y='300' style='fill:cyan;'>\</tspan>
-<tspan x='228' y='300' style='fill:white;'>'</tspan>
-<tspan x='234' y='300' style='fill:white;'>|</tspan>
-<tspan x='246' y='300' style='fill:yellow;'>.</tspan>
-<tspan x='252' y='300' style='fill:yellow;'>-</tspan>
-<tspan x='258' y='300' style='fill:yellow;'>`</tspan>
-<tspan x='270' y='300' style='fill:yellow;'>\</tspan>
-<tspan x='276' y='300' style='fill:cyan;'>.</tspan>
-<tspan x='282' y='300' style='fill:cyan;'>-</tspan>
-<tspan x='288' y='300' style='fill:cyan;'>'</tspan>
-<tspan x='294' y='300' style='fill:cyan;'>`</tspan>
-<tspan x='300' y='300' style='fill:lime;'>_</tspan>
-<tspan x='336' y='300' style='fill:cyan;'>\</tspan>
-
-<tspan x='102' y='312' style='fill:lime;'>/</tspan>
-<tspan x='150' y='312' style='fill:lime;'>_</tspan>
-<tspan x='156' y='312' style='fill:lime;'>_</tspan>
-<tspan x='162' y='312' style='fill:lime;'>_</tspan>
-<tspan x='216' y='312' style='fill:cyan;'>/</tspan>
-<tspan x='234' y='312' style='fill:white;'>'</tspan>
-<tspan x='240' y='312' style='fill:yellow;'>.</tspan>
-<tspan x='246' y='312' style='fill:lime;'>.</tspan>
-<tspan x='252' y='312' style='fill:lime;'>'</tspan>
-<tspan x='258' y='312' style='fill:lime;'>'</tspan>
-<tspan x='264' y='312' style='fill:lime;'>`</tspan>
-<tspan x='270' y='312' style='fill:lime;'>`</tspan>
-<tspan x='276' y='312' style='fill:lime;'>'</tspan>
-<tspan x='282' y='312' style='fill:lime;'>'</tspan>
-<tspan x='288' y='312' style='fill:lime;'>`</tspan>
-<tspan x='294' y='312' style='fill:lime;'>`</tspan>
-<tspan x='306' y='312' style='fill:lime;'>`</tspan>
-<tspan x='312' y='312' style='fill:lime;'>\</tspan>
-<tspan x='342' y='312' style='fill:cyan;'>.</tspan>
-
-<tspan x='96' y='324' style='fill:blue;'>(</tspan>
-<tspan x='102' y='324' style='fill:lime;'>`</tspan>
-<tspan x='108' y='324' style='fill:lime;'>`</tspan>
-<tspan x='114' y='324' style='fill:lime;'>'</tspan>
-<tspan x='120' y='324' style='fill:lime;'>'</tspan>
-<tspan x='126' y='324' style='fill:lime;'>'</tspan>
-<tspan x='132' y='324' style='fill:lime;'>'</tspan>
-<tspan x='138' y='324' style='fill:lime;'>`</tspan>
-<tspan x='144' y='324' style='fill:lime;'>`</tspan>
-<tspan x='168' y='324' style='fill:lime;'>\</tspan>
-<tspan x='216' y='324' style='fill:cyan;'>`</tspan>
-<tspan x='222' y='324' style='fill:lime;'>-</tspan>
-<tspan x='228' y='324' style='fill:lime;'>-</tspan>
-<tspan x='234' y='324' style='fill:lime;'>'</tspan>
-<tspan x='240' y='324' style='fill:lime;'>`</tspan>
-<tspan x='318' y='324' style='fill:lime;'>\</tspan>
-<tspan x='342' y='324' style='fill:cyan;'>|</tspan>
-<tspan x='390' y='324' style='fill:lime;'>.</tspan>
-<tspan x='396' y='324' style='fill:lime;'>.</tspan>
-<tspan x='402' y='324' style='fill:cyan;'>-</tspan>
-<tspan x='408' y='324' style='fill:cyan;'>-</tspan>
-<tspan x='414' y='324' style='fill:cyan;'>.</tspan>
-
-<tspan x='102' y='336' style='fill:blue;'>\</tspan>
-<tspan x='168' y='336' style='fill:lime;'>(</tspan>
-<tspan x='174' y='336' style='fill:lime;'>_</tspan>
-<tspan x='180' y='336' style='fill:lime;'>_</tspan>
-<tspan x='186' y='336' style='fill:lime;'>,</tspan>
-<tspan x='192' y='336' style='fill:lime;'>.</tspan>
-<tspan x='198' y='336' style='fill:lime;'>.</tspan>
-<tspan x='204' y='336' style='fill:lime;'>-</tspan>
-<tspan x='210' y='336' style='fill:lime;'>'</tspan>
-<tspan x='216' y='336' style='fill:lime;'>`</tspan>
-<tspan x='270' y='336' style='fill:blue;'>_</tspan>
-<tspan x='276' y='336' style='fill:blue;'>_</tspan>
-<tspan x='282' y='336' style='fill:blue;'>_</tspan>
-<tspan x='318' y='336' style='fill:lime;'>(</tspan>
-<tspan x='342' y='336' style='fill:cyan;'>'</tspan>
-<tspan x='348' y='336' style='fill:cyan;'>\</tspan>
-<tspan x='372' y='336' style='fill:lime;'>.</tspan>
-<tspan x='378' y='336' style='fill:lime;'>-</tspan>
-<tspan x='384' y='336' style='fill:lime;'>`</tspan>
-<tspan x='390' y='336' style='fill:blue;'>_</tspan>
-<tspan x='396' y='336' style='fill:blue;'>_</tspan>
-<tspan x='402' y='336' style='fill:lime;'>\</tspan>
-<tspan x='420' y='336' style='fill:cyan;'>\</tspan>
-<tspan x='438' y='336' style='fill:blue;'>.</tspan>
-<tspan x='444' y='336' style='fill:blue;'>-</tspan>
-<tspan x='450' y='336' style='fill:blue;'>-</tspan>
-<tspan x='456' y='336' style='fill:blue;'>.</tspan>
-
-<tspan x='108' y='348' style='fill:blue;'>'</tspan>
-<tspan x='114' y='348' style='fill:blue;'>-</tspan>
-<tspan x='120' y='348' style='fill:blue;'>.</tspan>
-<tspan x='126' y='348' style='fill:blue;'>.</tspan>
-<tspan x='132' y='348' style='fill:blue;'>-</tspan>
-<tspan x='138' y='348' style='fill:blue;'>-</tspan>
-<tspan x='144' y='348' style='fill:blue;'>-</tspan>
-<tspan x='150' y='348' style='fill:blue;'>-</tspan>
-<tspan x='156' y='348' style='fill:blue;'>.</tspan>
-<tspan x='162' y='348' style='fill:blue;'>.</tspan>
-<tspan x='168' y='348' style='fill:blue;'>,</tspan>
-<tspan x='234' y='348' style='fill:blue;'>,</tspan>
-<tspan x='240' y='348' style='fill:blue;'>.</tspan>
-<tspan x='246' y='348' style='fill:blue;'>-</tspan>
-<tspan x='252' y='348' style='fill:blue;'>'</tspan>
-<tspan x='258' y='348' style='fill:blue;'>`</tspan>
-<tspan x='264' y='348' style='fill:blue;'>`</tspan>
-<tspan x='288' y='348' style='fill:blue;'>`</tspan>
-<tspan x='294' y='348' style='fill:blue;'>-</tspan>
-<tspan x='300' y='348' style='fill:blue;'>.</tspan>
-<tspan x='324' y='348' style='fill:lime;'>\</tspan>
-<tspan x='330' y='348' style='fill:lime;'>_</tspan>
-<tspan x='336' y='348' style='fill:lime;'>_</tspan>
-<tspan x='342' y='348' style='fill:lime;'>.</tspan>
-<tspan x='348' y='348' style='fill:lime;'>'</tspan>
-<tspan x='354' y='348' style='fill:lime;'>'</tspan>
-<tspan x='360' y='348' style='fill:lime;'>'</tspan>
-<tspan x='366' y='348' style='fill:lime;'>`</tspan>
-<tspan x='378' y='348' style='fill:blue;'>,</tspan>
-<tspan x='384' y='348' style='fill:blue;'>'</tspan>
-<tspan x='402' y='348' style='fill:blue;'>`</tspan>
-<tspan x='408' y='348' style='fill:blue;'>`</tspan>
-<tspan x='414' y='348' style='fill:blue;'>-</tspan>
-<tspan x='420' y='348' style='fill:blue;'>-</tspan>
-<tspan x='426' y='348' style='fill:blue;'>`</tspan>
-<tspan x='432' y='348' style='fill:blue;'>`</tspan>
-<tspan x='462' y='348' style='fill:blue;'>'</tspan>
-<tspan x='468' y='348' style='fill:magenta;'>.</tspan>
-<tspan x='474' y='348' style='fill:magenta;'>'</tspan>
-
-<tspan x='174' y='360' style='fill:blue;'>\</tspan>
-<tspan x='210' y='360' style='fill:blue;'>.</tspan>
-<tspan x='216' y='360' style='fill:blue;'>-</tspan>
-<tspan x='222' y='360' style='fill:blue;'>'</tspan>
-<tspan x='228' y='360' style='fill:blue;'>`</tspan>
-<tspan x='300' y='360' style='fill:magenta;'>_</tspan>
-<tspan x='306' y='360' style='fill:magenta;'>_</tspan>
-<tspan x='342' y='360' style='fill:blue;'>.</tspan>
-<tspan x='348' y='360' style='fill:blue;'>-</tspan>
-<tspan x='354' y='360' style='fill:blue;'>-</tspan>
-<tspan x='360' y='360' style='fill:magenta;'>.</tspan>
-<tspan x='366' y='360' style='fill:magenta;'>-</tspan>
-<tspan x='372' y='360' style='fill:magenta;'>'</tspan>
-<tspan x='378' y='360' style='fill:magenta;'>'</tspan>
-<tspan x='384' y='360' style='fill:magenta;'>.</tspan>
-<tspan x='420' y='360' style='fill:magenta;'>.</tspan>
-<tspan x='426' y='360' style='fill:magenta;'>-</tspan>
-<tspan x='432' y='360' style='fill:magenta;'>'</tspan>
-<tspan x='438' y='360' style='fill:magenta;'>`</tspan>
-<tspan x='444' y='360' style='fill:magenta;'>`</tspan>
-<tspan x='450' y='360' style='fill:magenta;'>'</tspan>
-<tspan x='456' y='360' style='fill:magenta;'>'</tspan>
-<tspan x='462' y='360' style='fill:magenta;'>`</tspan>
-
-<tspan x='180' y='372' style='fill:blue;'>\</tspan>
-<tspan x='186' y='372' style='fill:blue;'>.</tspan>
-<tspan x='192' y='372' style='fill:blue;'>-</tspan>
-<tspan x='198' y='372' style='fill:blue;'>'</tspan>
-<tspan x='204' y='372' style='fill:blue;'>`</tspan>
-<tspan x='282' y='372' style='fill:magenta;'>.</tspan>
-<tspan x='288' y='372' style='fill:magenta;'>-</tspan>
-<tspan x='294' y='372' style='fill:magenta;'>'</tspan>
-<tspan x='312' y='372' style='fill:magenta;'>`</tspan>
-<tspan x='318' y='372' style='fill:magenta;'>\</tspan>
-<tspan x='324' y='372' style='fill:blue;'>`</tspan>
-<tspan x='330' y='372' style='fill:blue;'>'</tspan>
-<tspan x='336' y='372' style='fill:blue;'>`</tspan>
-<tspan x='342' y='372' style='fill:magenta;'>.</tspan>
-<tspan x='348' y='372' style='fill:magenta;'>'</tspan>
-<tspan x='354' y='372' style='fill:magenta;'>`</tspan>
-<tspan x='390' y='372' style='fill:magenta;'>\</tspan>
-<tspan x='396' y='372' style='fill:magenta;'>_</tspan>
-<tspan x='402' y='372' style='fill:magenta;'>.</tspan>
-<tspan x='408' y='372' style='fill:magenta;'>-</tspan>
-<tspan x='414' y='372' style='fill:magenta;'>'</tspan>
-
-<tspan x='186' y='384' style='fill:magenta;'>'</tspan>
-<tspan x='192' y='384' style='fill:magenta;'>.</tspan>
-<tspan x='198' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='204' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='210' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='216' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='222' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='228' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='234' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='240' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='246' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='252' y='384' style='fill:magenta;'>_</tspan>
-<tspan x='258' y='384' style='fill:magenta;'>.</tspan>
-<tspan x='264' y='384' style='fill:magenta;'>-</tspan>
-<tspan x='270' y='384' style='fill:magenta;'>'</tspan>
-<tspan x='276' y='384' style='fill:magenta;'>`</tspan>
-<tspan x='324' y='384' style='fill:magenta;'>`</tspan>
-<tspan x='330' y='384' style='fill:magenta;'>'</tspan>
-<tspan x='336' y='384' style='fill:magenta;'>`</tspan>
-
-
-</text></svg>
+<svg xmlns='http://www.w3.org/2000/svg' width='486.0' height='396'>
+<rect style='fill:#000000;stroke:none;' width='486.0' height='396' x='0' y='0' />
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#54ff54;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                                                 </tspan>
+<tspan x='0' y='36'>                                                                                 </tspan>
+<tspan x='0' y='48'>                                                 _                               </tspan>
+<tspan x='0' y='60'>                                              -'` \                              </tspan>
+<tspan x='0' y='72'>                                                   :                             </tspan>
+<tspan x='0' y='84'>                                                   |                             </tspan>
+<tspan x='0' y='96'>                                      \  \ \       |          _</tspan>
+<tspan x='0' y='108'>                                       '-.__\      (      .-'` `.</tspan>
+<tspan x='0' y='120'>                                                    `---``      )                </tspan>
+<tspan x='0' y='132'>                                                                /                </tspan>
+<tspan x='0' y='144'>                                                                \                </tspan>
+<tspan x='0' y='156'>                                                                 `''--.,         </tspan>
+<tspan x='0' y='168'>                                                                        )        </tspan>
+<tspan x='0' y='180'>                                                                        )        </tspan>
+<tspan x='0' y='192'>                                                                        /        </tspan>
+<tspan x='0' y='204'>                                                                       (         </tspan>
+<tspan x='0' y='216'>                                                                        `      </tspan>
+<tspan x='0' y='228'>        </tspan>
+<tspan x='0' y='240'>                                   </tspan>
+<tspan x='0' y='252'>                                   </tspan>
+<tspan x='0' y='264'>                       _                                 </tspan>
+<tspan x='0' y='276'>                   .-'`                                                          </tspan>
+<tspan x='0' y='288'>                 /`                                                              </tspan>
+<tspan x='0' y='300'>                (_                                _                              </tspan>
+<tspan x='0' y='312'>                 /       ___             .''``''`` `\                            </tspan>
+<tspan x='0' y='324'>                 ``''''``   \        --'`            \           ..              </tspan>
+<tspan x='0' y='336'>                            (__,..-'`                (        .-`  \         </tspan>
+<tspan x='0' y='348'>                                                      \__.'''`               </tspan>
+<tspan x='0' y='360'>                        </tspan>
+<tspan x='0' y='372'>                                    </tspan>
+<tspan x='0' y='384'>                               </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#686868;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                  </tspan>
+<tspan x='0' y='36'>                                                            </tspan>
+<tspan x='0' y='48'>                                      </tspan>
+<tspan x='0' y='60'>                              </tspan>
+<tspan x='0' y='72'>                             </tspan>
+<tspan x='0' y='84'>                             </tspan>
+<tspan x='0' y='96'>               </tspan>
+<tspan x='0' y='108'>               </tspan>
+<tspan x='0' y='120'>                                    \__.          </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b218b2;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                                           </tspan>
+<tspan x='0' y='36'>                                                                     </tspan>
+<tspan x='0' y='48'>                                                                 </tspan>
+<tspan x='0' y='60'>                                                        </tspan>
+<tspan x='0' y='72'>                                       /\                           </tspan>
+<tspan x='0' y='84'>                                       \/                          </tspan>
+<tspan x='0' y='96'>                                                      </tspan>
+<tspan x='0' y='108'>             </tspan>
+<tspan x='0' y='120'>              </tspan>
+<tspan x='0' y='132'>               </tspan>
+<tspan x='0' y='144'>               </tspan>
+<tspan x='0' y='156'>                                     </tspan>
+<tspan x='0' y='168'>                                       </tspan>
+<tspan x='0' y='180'>                                   </tspan>
+<tspan x='0' y='192'>                                         A       </tspan>
+<tspan x='0' y='204'>                                         V       </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#54ffff;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                                                 </tspan>
+<tspan x='0' y='36'>                                                 ___                             </tspan>
+<tspan x='0' y='48'>                                    ___        '`   `'.                          </tspan>
+<tspan x='0' y='60'>                                 .-'      u           )                          </tspan>
+<tspan x='0' y='72'>                               .'                     |                          </tspan>
+<tspan x='0' y='84'>                              /                       |                          </tspan>
+<tspan x='0' y='96'>                             :                        (   _.-.</tspan>
+<tspan x='0' y='108'>                             | ( /.                    `''</tspan>
+<tspan x='0' y='120'>                             | \  )                 </tspan>
+<tspan x='0' y='132'>                             |  '`                </tspan>
+<tspan x='0' y='144'>                             (</tspan>
+<tspan x='0' y='156'>                              \</tspan>
+<tspan x='0' y='168'>                               \ </tspan>
+<tspan x='0' y='180'>      </tspan>
+<tspan x='0' y='192'>         </tspan>
+<tspan x='0' y='204'>       </tspan>
+<tspan x='0' y='216'> </tspan>
+<tspan x='0' y='228'>        </tspan>
+<tspan x='0' y='240'>                                    </tspan>
+<tspan x='0' y='252'>                                   </tspan>
+<tspan x='0' y='264'>                                 </tspan>
+<tspan x='0' y='276'>                        (                                   </tspan>
+<tspan x='0' y='288'>                         \                        ,.---.                         </tspan>
+<tspan x='0' y='300'>                          `--''`````\         .-'`      \                        </tspan>
+<tspan x='0' y='312'>                                    /                    .                       </tspan>
+<tspan x='0' y='324'>                                    `                    |         --.           </tspan>
+<tspan x='0' y='336'>                                                         '\           \          </tspan>
+<tspan x='0' y='348'>                                                                             </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b2b2b2;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                         </tspan>
+<tspan x='0' y='36'>                                                     </tspan>
+<tspan x='0' y='48'>                                                </tspan>
+<tspan x='0' y='60'>                           _                  </tspan>
+<tspan x='0' y='72'>                          ` \          </tspan>
+<tspan x='0' y='84'>                    .--.    .)                         </tspan>
+<tspan x='0' y='96'>                .-'`  .|   .|                 </tspan>
+<tspan x='0' y='108'>             .'`      |'   |'                        </tspan>
+<tspan x='0' y='120'>          .-`         |    |                             </tspan>
+<tspan x='0' y='132'>         (_.'         |   .|                        </tspan>
+<tspan x='0' y='144'>          /   .       |   |'                              </tspan>
+<tspan x='0' y='156'>         (_.-'        |   |                             </tspan>
+<tspan x='0' y='168'>            /  /      |   :                                       </tspan>
+<tspan x='0' y='180'>           (  /       |   (             </tspan>
+<tspan x='0' y='192'>            ``(  .'   (    '..-'</tspan>
+<tspan x='0' y='204'>               '`'  .  \              </tspan>
+<tspan x='0' y='216'>                 `'`(_. `''        </tspan>
+<tspan x='0' y='228'>               </tspan>
+<tspan x='0' y='240'>                                  </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#b26818;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                                           </tspan>
+<tspan x='0' y='36'>                                                                     </tspan>
+<tspan x='0' y='48'>                                                              </tspan>
+<tspan x='0' y='60'>                                                    </tspan>
+<tspan x='0' y='72'>                                                               </tspan>
+<tspan x='0' y='84'>                                                       </tspan>
+<tspan x='0' y='96'>                                         </tspan>
+<tspan x='0' y='108'>             </tspan>
+<tspan x='0' y='120'>              </tspan>
+<tspan x='0' y='132'>               </tspan>
+<tspan x='0' y='144'>               </tspan>
+<tspan x='0' y='156'>                                   </tspan>
+<tspan x='0' y='168'>                                </tspan>
+<tspan x='0' y='180'>                              </tspan>
+<tspan x='0' y='192'>                                   </tspan>
+<tspan x='0' y='204'>                                       </tspan>
+<tspan x='0' y='216'>                                          </tspan>
+<tspan x='0' y='228'>                                       </tspan>
+<tspan x='0' y='240'>                                   </tspan>
+<tspan x='0' y='252'>                                   </tspan>
+<tspan x='0' y='264'>                          . . ,                                                  </tspan>
+<tspan x='0' y='276'>                          -   -                                           </tspan>
+<tspan x='0' y='288'>                          ' ' `                                   </tspan>
+<tspan x='0' y='300'>                                      </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#ffffff;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                              ,'/                                </tspan>
+<tspan x='0' y='36'>                                             . /                          </tspan>
+<tspan x='0' y='48'>                                            / /                         </tspan>
+<tspan x='0' y='60'>                       __                  / /                            </tspan>
+<tspan x='0' y='72'>                  .-'``  \       .')      / /                               </tspan>
+<tspan x='0' y='84'>               .'`        )     / /      / /                                </tspan>
+<tspan x='0' y='96'>            .'`          .'               /                     </tspan>
+<tspan x='0' y='108'>          ,'             |                                           </tspan>
+<tspan x='0' y='120'>        .'              .|                |                             </tspan>
+<tspan x='0' y='132'>      .'                |'     (   ,_     `.                            </tspan>
+<tspan x='0' y='144'>    .'                  |       \    `\-.-'                                </tspan>
+<tspan x='0' y='156'>   -  .                 |              \                            </tspan>
+<tspan x='0' y='168'> .` .'  .               |               \                              </tspan>
+<tspan x='0' y='180'> '-'/  /                :       |       </tspan>
+<tspan x='0' y='192'>   /  /    /            (       :'          </tspan>
+<tspan x='0' y='204'>  /  /    /              '---''`              </tspan>
+<tspan x='0' y='216'> '  /    /    /                .'`     </tspan>
+<tspan x='0' y='228'>(  /    /    /   /  /  / / ,'-`      |  | \         </tspan>
+<tspan x='0' y='240'> '`/   /    /   /  /  /.''`.'        |  :  \                                     </tspan>
+<tspan x='0' y='252'>  /   /    /   /  /`-'    /  ..---.  |  '.  \                                    </tspan>
+<tspan x='0' y='264'> (   //   /   /(_/       /         )/|.  '.  \                                   </tspan>
+<tspan x='0' y='276'>  `-'(   /   /                    /  '|   '.                                   </tspan>
+<tspan x='0' y='288'>      `-'`--'                   .'    |.                           </tspan>
+<tspan x='0' y='300'>                                      '|                       </tspan>
+<tspan x='0' y='312'>                                       ' </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#ff54ff;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                  </tspan>
+<tspan x='0' y='36'>                                           </tspan>
+<tspan x='0' y='48'>                                               </tspan>
+<tspan x='0' y='60'>                          </tspan>
+<tspan x='0' y='72'>                       </tspan>
+<tspan x='0' y='84'>                       </tspan>
+<tspan x='0' y='96'>                </tspan>
+<tspan x='0' y='108'> </tspan>
+<tspan x='0' y='120'>                     </tspan>
+<tspan x='0' y='132'>             </tspan>
+<tspan x='0' y='144'>             </tspan>
+<tspan x='0' y='156'>                                            __</tspan>
+<tspan x='0' y='168'>                                         .'`  '.       .--.            </tspan>
+<tspan x='0' y='180'>                                                \    .'    )       __        </tspan>
+<tspan x='0' y='192'>                                                 \_.'      (_ .---:  )       </tspan>
+<tspan x='0' y='204'>                                            `-.            .-`     '.(           </tspan>
+<tspan x='0' y='216'>                                               `-..___..-'`          \   .'      </tspan>
+<tspan x='0' y='228'>                                                                      ''`        </tspan>
+<tspan x='0' y='240'>                                    </tspan>
+<tspan x='0' y='252'>                                  </tspan>
+<tspan x='0' y='264'>                             </tspan>
+<tspan x='0' y='276'>                                </tspan>
+<tspan x='0' y='288'>                       </tspan>
+<tspan x='0' y='300'>                      </tspan>
+<tspan x='0' y='312'>                    </tspan>
+<tspan x='0' y='324'>           </tspan>
+<tspan x='0' y='336'>     </tspan>
+<tspan x='0' y='348'>                                                                              .' </tspan>
+<tspan x='0' y='360'>                                                  __        .-''.     .-'``''`   </tspan>
+<tspan x='0' y='372'>                                               .-'  `\   .'`     \_.-'           </tspan>
+<tspan x='0' y='384'>                               '.__________.-'`       `'`</tspan>
+<tspan x='0' y='396'>                               </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#d6d646;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                                           </tspan>
+<tspan x='0' y='36'>                                                                     </tspan>
+<tspan x='0' y='48'>                                       /\                            </tspan>
+<tspan x='0' y='60'>                                     :v  :                        </tspan>
+<tspan x='0' y='72'>                                     )                              </tspan>
+<tspan x='0' y='84'>                                   -'__                            </tspan>
+<tspan x='0' y='96'>                               @_-'``                 </tspan>
+<tspan x='0' y='108'>             </tspan>
+<tspan x='0' y='120'>              </tspan>
+<tspan x='0' y='132'>               </tspan>
+<tspan x='0' y='144'>               </tspan>
+<tspan x='0' y='156'>                                |\       </tspan>
+<tspan x='0' y='168'>                                | `-._       </tspan>
+<tspan x='0' y='180'>                                 '-,  `-.)\       </tspan>
+<tspan x='0' y='192'>                                    `-,    )        </tspan>
+<tspan x='0' y='204'>                                       \   )        </tspan>
+<tspan x='0' y='216'>                                        )-'     </tspan>
+<tspan x='0' y='228'>                                       </tspan>
+<tspan x='0' y='240'>                                   </tspan>
+<tspan x='0' y='252'>                                   </tspan>
+<tspan x='0' y='264'>                                                                                 </tspan>
+<tspan x='0' y='276'>                           (_)               (\                                  </tspan>
+<tspan x='0' y='288'>                                          ('.` \                                 </tspan>
+<tspan x='0' y='300'>                                         .-` \</tspan>
+<tspan x='0' y='312'>                                        . </tspan>
+</text>
+<text y='0' x='0' style='font-family:monospace;font-size:12px;font-weight:#b2b2b2;fill:white;fill:#5454ff;letter-spacing:-1.2px' xml:space='preserve'>
+<tspan x='0' y='12'>                                                                                 </tspan>
+<tspan x='0' y='24'>                                                        </tspan>
+<tspan x='0' y='36'>                                  </tspan>
+<tspan x='0' y='48'>                        </tspan>
+<tspan x='0' y='60'>                        </tspan>
+<tspan x='0' y='72'>                                </tspan>
+<tspan x='0' y='84'>                                           </tspan>
+<tspan x='0' y='96'>                                            ..--.                      </tspan>
+<tspan x='0' y='108'>                                                 )                  </tspan>
+<tspan x='0' y='120'>                                                 |                    </tspan>
+<tspan x='0' y='132'>                                                 :       .--.                 </tspan>
+<tspan x='0' y='144'>                                                  \  .-'`    |                </tspan>
+<tspan x='0' y='156'>                                                   ``        |           </tspan>
+<tspan x='0' y='168'>                                                             `-..-'``'.      </tspan>
+<tspan x='0' y='180'>                                                                      )         </tspan>
+<tspan x='0' y='192'>                                                                      |          </tspan>
+<tspan x='0' y='204'>                                                                      (          </tspan>
+<tspan x='0' y='216'>                                                                       ` .'      </tspan>
+<tspan x='0' y='228'>           </tspan>
+<tspan x='0' y='240'>                                    </tspan>
+<tspan x='0' y='252'>                               </tspan>
+<tspan x='0' y='264'>                              </tspan>
+<tspan x='0' y='276'>                                                                      </tspan>
+<tspan x='0' y='288'>                                                           </tspan>
+<tspan x='0' y='300'>                                                          </tspan>
+<tspan x='0' y='312'>                                                       </tspan>
+<tspan x='0' y='324'>                (                             </tspan>
+<tspan x='0' y='336'>                 \                           ___                 __      .--.  </tspan>
+<tspan x='0' y='348'>                  '-..----..,          ,.-'``   `-.            ,'  ``--``    ' </tspan>
+<tspan x='0' y='360'>                             \     .-'`            \     .--.-'                  </tspan>
+<tspan x='0' y='372'>                              \.-'`                 ` `'`                        </tspan>
+<tspan x='0' y='384'>                                                         </tspan>
+</text>
+</svg>

@@ -1,0 +1,3 @@
+[submodule "patsi"]
+	path = patsi
+	url = https://github.com/mbasaglia/Python-Ansi-Terminal-Styling-Interface.git

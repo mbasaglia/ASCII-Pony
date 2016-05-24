@@ -49,22 +49,24 @@ Requirements:
 Generating Images
 -----------------
 
-Each final character is divided into a separate file, one for each color.
-The file name is what you'd put in an ANSI escape to make it colored.
-The script render_parts.php takes a directory as input and scans for such files.
-It produces the following kinds of output:
+The sources for each character are divided into a file for each color.
+The file name is one of these eight colors, with an optional _bright suffix:
+black, red, green, yellow, blue, magenta, cyan, white.
+See patsi/patsi-render.py --help for details on how the rendered files are
+generated and more formats than the Makefile produces.
+The makefile produces the following kinds of output:
 
-* ANSI-Encoded Colored text (default)
-* Plaintext (if you pass nocolor)
-* SVG (if you pass svg)
+* ANSI-Encoded Colored text
+* Plain Text
+* SVG
+* PNG
+* Shell script
+* IRC-Encoded Colored text
 
-Being a PHP script, it requires PHP in order to run.
+Being a Python script, it requires Python in order to run.
+Additional requirements will be installed using pip and virtualenv.
 
-The makefile will compile all of the above, the plaintext in the same directory
-as the parent of the directory containing the various part files,
-and everything else in /rendered.
-
-It will also call Inkscape to generate PNG images from the SVG.
+The makefile will compile the above formats in ./rendered.
 
 You can cat the colored files on a terminal to see the fancy output (as long as
 the terminal supports colors).
