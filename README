@@ -32,7 +32,7 @@ It can be installed system-wide using "make install" (PREFIX selects the
 target directory).
 
 The global config is found in $PREFIX/share/ascii-pony/systempony.conf,
-(or ./systempony.conf if not installed), user config is in ~/.systempony.
+(or ./systempony.conf if not installed), user config is in ~/.systempony.conf
 
 Config Variables:
 * PONY   : a pony identifier or "random",
