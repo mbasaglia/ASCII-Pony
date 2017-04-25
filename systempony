@@ -353,6 +353,8 @@ declare -A info_firsty # Number of lines before the system info output
 info_firsty[luna]=18
 info_firsty[rarity]=11
 info_firsty[trixie]=16
+info_firsty[twilight-unicorn]=10
+info_firsty[twilight-alicorn]=10
 
 if [ -f "$ponyfile" ]
 then
