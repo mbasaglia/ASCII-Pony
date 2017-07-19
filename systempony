@@ -4,7 +4,7 @@
 # Name of the pony
 PONY=random
 # What info to show (must have a function defined as ponyget_* to work)
-INFO=(User Hostname IP Distro Kernel Uptime Load Shell Packages RAM Swap Disk)
+INFO=(User Hostname IP Distro Kernel Uptime Load Shell Packages RAM CPU Swap Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
 FSTYPE=
 # Interface to get the IP address from
