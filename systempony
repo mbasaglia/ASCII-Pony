@@ -6,7 +6,7 @@ PONY=random
 # What info to show (must have a function defined as ponyget_* to work)
 INFO=(User Hostname IP Distro Kernel Uptime Load Shell Packages RAM CPU Swap Disk)
 # File system type to show disk usage (default/empty=all) (see df for specific values)
-FSTYPE=ext4
+FSTYPE=
 # Interface to get the IP address from
 IP_INTERFACE="eth0"
 
@@ -138,7 +138,7 @@ function ponyget_Packages()
 function ponyget_Disk()
 {
     local dfoption=$FSTYPE
-    [ "$dfoption" ] && dfoption="grep $FSTYPE"
+    [ "$dfoption" ] && dfoption="grep $FSTYPE" || dfoption="cat"
     local diskusage=$(df -h -T | $dfoption | tail -n 1 | sed -r "s/ +/\t/g" )
     local used=$(echo "$diskusage" | cut -f 4)
     local total=$(echo "$diskusage" | cut -f 3)
