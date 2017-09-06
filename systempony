@@ -10,6 +10,18 @@ FSTYPE=
 # Interface to get the IP address from
 IP_INTERFACE="eth0"
 
+function human_readable() {
+    echo "$1" | awk '
+    function human(x) {
+        if (x<1000) {return x} else {x/=1024}
+        s="kMGTEPYZ";
+        while (x>=1000 && length(s)>1)
+            {x/=1024; s=substr(s,2)}
+        return int(x+0.5) substr(s,1,1)
+    }
+    {sub(/^[0-9]+/, human($1)); print}'
+}
+
 function ponyget_Shell()
 {
     echo "$SHELL"
@@ -22,7 +34,7 @@ function ponyget_User()
 
 function ponyget_Distro()
 {
-    lsb_release -isr | paste "-d " - -
+    echo $(grep -i '^PRETTY_NAME' /etc/os-release | awk -F= '{print $2}' | tr '"' ' ')
 }
 
 function pccolor()
@@ -40,9 +52,9 @@ function pccolor()
 
 function ponyget_RAM()
 {
-    local ramtable=$(free -h | head -n -1)
-    local used=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
-    local total=$(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2)
+    local ramtable=$(free -b | head -n -1)
+    local used=$(human_readable $(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3))
+    local total=$(human_readable $(echo "$ramtable" | sed -n 2p | sed -r "s/ +/\t/g"  | cut -f 2))
 
     ramtable=$(free -m | head -n -1)
     local used_M=$(echo "$ramtable" | tail -n 1 | sed -r "s/ +/\t/g"  | cut -f 3)
@@ -55,9 +67,9 @@ function ponyget_RAM()
 
 function ponyget_Swap()
 {
-    local swaptable=$(free -h | grep Swap)
-    local used=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 3)
-    local total=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 2)
+    local swaptable=$(free -b | grep Swap)
+    local used=$(human_readable $(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 3))
+    local total=$(human_readable $(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 2))
 
     swaptable=$(free -m | grep Swap)
     local used_M=$(echo "$swaptable" | sed -r "s/ +/\t/g"  | cut -f 3)
@@ -90,13 +102,20 @@ function ponyget_CPU_Usage()
 
 function ponyget_Uptime()
 {
-    uptime | grep -oE "up.*user" | \
-        sed -r -e "s/up\s*(.+),\s*[0-9]+\s*user/\1/" -e "s/\s+/ /g"
+    let uptime=$(awk -F. '{print $1}' /proc/uptime)
+    let sec="$uptime%60"
+    let uptime/=60
+    let min="$uptime%60"
+    let uptime/=60
+    let hrs="$uptime%24"
+    let days="$uptime/24"
+
+    printf "%d days, %d:%02d:%02d" $days $hrs $min $sec
 }
 
 function ponyget_Load()
 {
-    uptime | sed -r -e "s/.*load average:\s*//"
+    awk '{print $1 " " $2 " " $3}' /proc/loadavg
 }
 
 function ponyget_Packages()
@@ -110,16 +129,19 @@ function ponyget_Packages()
     elif which pacman &>/dev/null
     then
         pacman -Q | wc -l
+    elif which apk &>/dev/null
+    then
+	apk list | wc -l
     fi
 }
 
 function ponyget_Disk()
 {
     local dfoption=$FSTYPE
-    [ "$dfoption" ] && dfoption="-t $FSTYPE"
-    local diskusage=$(df -lh $dfoption --total | tail -n 1 | sed -r "s/ +/\t/g" )
-    local used=$(echo "$diskusage" | cut -f 3)
-    local total=$(echo "$diskusage" | cut -f 2)
+    [ "$dfoption" ] && dfoption="grep $FSTYPE" || dfoption="cat"
+    local diskusage=$(df -h -T | $dfoption | tail -n 1 | sed -r "s/ +/\t/g" )
+    local used=$(echo "$diskusage" | cut -f 4)
+    local total=$(echo "$diskusage" | cut -f 3)
     local percent=$(echo "$diskusage"  | cut -f 5 | sed s/%// )
 
     echo -e "$(pccolor $percent)$used\x1b[0m / $total"
@@ -208,7 +230,7 @@ function select_info()
     INFO=($(echo "${*}" | column -t -s:,))
 }
 
-SELFDIR=$(dirname $(readlink -se "${BASH_SOURCE[0]}"))
+SELFDIR=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 function get_data_file()
 {
     if [ -e "$SELFDIR/$1" ]
